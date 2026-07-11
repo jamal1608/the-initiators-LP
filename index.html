@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>The Initiators — Learn Smart | Download App</title>
+  <meta name="description" content="Learn Smart by The Initiators — Pakistan's #1 learning app for Class 9-10 students. Video lectures, quizzes, notes for Karachi Board, Aga Khan, O-Level & IGCSE. Download now!">
+  <meta name="keywords" content="Learn Smart, The Initiators, Pakistani students, Karachi Board, Aga Khan Board, O-Level, IGCSE, Class 9, Class 10, Matric, education app, video lectures, online learning">
+  <meta name="author" content="The Initiators">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Initiators — Learn Smart | Download App">
+  <meta property="og:description" content="Pakistan's #1 learning app for Class 9-10 students. Video lectures, quizzes, notes for all major boards. Download now!">
+  <meta property="og:image" content="./images/phone-mockup.png">
+  <meta property="og:url" content="https://learnsmart.theinitiators.pk">
+  <meta property="og:site_name" content="The Initiators — Learn Smart">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Initiators — Learn Smart | Download App">
+  <meta name="twitter:description" content="Pakistan's #1 learning app for Class 9-10 students. Download now!">
+  <meta name="twitter:image" content="./images/phone-mockup.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/features-icon.png">
+
+  <!-- Theme Color for Mobile Browsers -->
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --accent-light: #fef3c7;
+      --white: #ffffff;
+      --light-bg: #f8fafc;
+      --text: #334155;
+      --text-light: #64748b;
+      --text-dark: #0f172a;
+      --border: #e2e8f0;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.06);
+      --radius: 12px;
+      --radius-lg: 16px;
+      --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Naskh Arabic', 'Noto Sans Urdu', 'Jameel Noori Nastaleeq', sans-serif;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-up-delay-1 { transition-delay: 0.1s; }
+    .fade-up-delay-2 { transition-delay: 0.2s; }
+    .fade-up-delay-3 { transition-delay: 0.3s; }
+    .fade-up-delay-4 { transition-delay: 0.4s; }
+    .fade-up-delay-5 { transition-delay: 0.5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+      50% { box-shadow: 0 0 0 16px rgba(245, 158, 11, 0); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes slide-in-bottom {
+      0% { transform: translateY(100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      background: rgba(15, 23, 42, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-brand .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .navbar-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .navbar-links a:hover,
+    .navbar-links a:focus {
+      color: var(--white);
+    }
+
+    .navbar-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-links a:hover::after {
+      width: 100%;
+    }
+
+    .navbar-cta {
+      background: var(--accent);
+      color: var(--primary) !important;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .navbar-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+
+    .navbar-cta::after {
+      display: none !important;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: white;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      padding: 24px 20px;
+      animation: slide-in-bottom 0.3s ease forwards;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: var(--transition);
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent);
+      padding-left: 8px;
+    }
+
+    .mobile-menu .mobile-cta {
+      display: inline-block;
+      margin-top: 24px;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* ========== CONTAINER ========== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ========== SECTION STYLES ========== */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent-hover);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse-glow 2s infinite;
+    }
+
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      margin-bottom: 20px;
+    }
+
+    .hero-title .accent {
+      color: var(--accent);
+      position: relative;
+    }
+
+    .hero-title .accent::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+      opacity: 0.3;
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.35);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 16px 32px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+    }
+
+    .hero-stat {
+      text-align: left;
+    }
+
+    .hero-stat-number {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    /* Phone mockup */
+    .hero-visual {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .phone-mockup-wrapper {
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .phone-mockup-wrapper img {
+      width: 280px;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      transform: perspective(1200px) rotateY(-8deg) rotateX(4deg);
+      transition: transform 0.5s ease;
+    }
+
+    .phone-mockup-wrapper:hover img {
+      transform: perspective(1200px) rotateY(-2deg) rotateX(1deg);
+    }
+
+    .phone-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* ========== FEATURES SECTION ========== */
+    .features {
+      background: var(--light-bg);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+
+    .feature-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .feature-icon.purple {
+      background: #f3e8ff;
+      color: #7c3aed;
+    }
+    .feature-icon.blue {
+      background: #dbeafe;
+      color: #2563eb;
+    }
+    .feature-icon.green {
+      background: #d1fae5;
+      color: #059669;
+    }
+    .feature-icon.red {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+    .feature-icon.amber {
+      background: #fef3c7;
+      color: #d97706;
+    }
+    .feature-icon.teal {
+      background: #ccfbf1;
+      color: #0d9488;
+    }
+
+    .feature-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-description {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* ========== BOARDS SECTION ========== */
+    .boards {
+      background: var(--white);
+    }
+
+    .boards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .board-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .board-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    .board-card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--light-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: var(--transition);
+    }
+
+    .board-card:hover .board-card-icon {
+      background: var(--accent);
+      transform: scale(1.08);
+    }
+
+    .board-card:hover .board-card-icon svg {
+      color: var(--primary);
+    }
+
+    .board-card-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--accent);
+      transition: var(--transition);
+    }
+
+    .board-card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .board-card-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* ========== HOW IT WORKS ========== */
+    .how-it-works {
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .how-it-works .section-title {
+      color: var(--white);
+    }
+
+    .how-it-works .section-subtitle {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .how-it-works .section-label {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 16%;
+      right: 16%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent);
+    }
+
+    .step-card {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.1);
+      border: 2px solid rgba(245, 158, 11, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      position: relative;
+      z-index: 1;
+      transition: var(--transition);
+    }
+
+    .step-card:hover .step-number {
+      background: var(--accent);
+      color: var(--primary);
+      border-color: var(--accent);
+      transform: scale(1.08);
+    }
+
+    .step-card:hover .step-number svg {
+      color: var(--primary);
+    }
+
+    .step-number svg {
+      width: 32px;
+      height: 32px;
+      color: var(--accent);
+      transition: var(--transition);
+    }
+
+    .step-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .step-description {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.65;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    /* ========== DOWNLOAD SECTION ========== */
+    .download {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .download::after {
+      content: '';
+      position: absolute;
+      bottom: -200px;
+      left: -200px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .download-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .download .section-title {
+      color: var(--white);
+      font-size: 2.5rem;
+    }
+
+    .download .section-subtitle {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 1.1rem;
+    }
+
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+      animation: pulse-glow 2.5s infinite;
+    }
+
+    .download-btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(245, 158, 11, 0.4);
+    }
+
+    .download-btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .download-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .download-note {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.82rem;
+      margin-top: 20px;
+    }
+
+    /* ========== FAQ SECTION ========== */
+    .faq {
+      background: var(--light-bg);
+    }
+
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .faq-item.active {
+      border-color: rgba(245, 158, 11, 0.3);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-stack);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      gap: 16px;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      color: var(--accent-hover);
+    }
+
+    .faq-item.active .faq-question {
+      color: var(--accent-hover);
+    }
+
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      color: var(--text-light);
+    }
+
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 0.92rem;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--primary);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 48px 0 24px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .footer-brand-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-tagline {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .footer-social svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-copyright {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.82rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.82rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ========== FLOATING DOWNLOAD BUTTON (MOBILE) ========== */
+    .floating-download {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      padding: 12px 16px;
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.98) 60%, transparent);
+      pointer-events: none;
+    }
+
+    .floating-download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 16px;
+      background: var(--accent);
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      pointer-events: all;
+      transition: var(--transition);
+      box-shadow: 0 -4px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .floating-download-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 2.6rem;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .boards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 56px 0;
+      }
+
+      .section-title {
+        font-size: 1.65rem;
+      }
+
+      .navbar-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 60px;
+      }
+
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-description {
+        margin: 0 auto 32px;
+        font-size: 1rem;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .phone-mockup-wrapper img {
+        width: 220px;
+        transform: none;
+      }
+
+      .phone-mockup-wrapper:hover img {
+        transform: none;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .boards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .board-card {
+        padding: 24px 16px;
+      }
+
+      .board-card-icon {
+        width: 52px;
+        height: 52px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .steps-grid::before {
+        display: none;
+      }
+
+      .download .section-title {
+        font-size: 1.8rem;
+      }
+
+      .download-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 16px;
+      }
+
+      .download-btn {
+        justify-content: center;
+      }
+
+      .floating-download {
+        display: block;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      /* Add bottom padding to account for floating button */
+      .faq,
+      .footer {
+        padding-bottom: 100px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero-title {
+        font-size: 1.85rem;
+      }
+
+      .hero-stat-number {
+        font-size: 1.3rem;
+      }
+
+      .boards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 14px 24px;
+        font-size: 0.92rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-brand">
+        <span class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        </span>
+        Learn Smart
+      </a>
+
+      <ul class="navbar-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#boards">Boards</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#download" class="navbar-cta">Download App</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <svg id="menuIconOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="menuIconClose" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features" class="mobile-nav-link">Features</a>
+    <a href="#boards" class="mobile-nav-link">Boards</a>
+    <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+    <a href="#faq" class="mobile-nav-link">FAQ</a>
+    <a href="#download" class="mobile-cta mobile-nav-link">Download App</a>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge fade-up">
+            <span class="hero-badge-dot"></span>
+            Now Available for Android
+          </div>
+
+          <h1 class="hero-title fade-up fade-up-delay-1">
+            Learn <span class="accent">Smarter</span>,<br>
+            Score Higher.
+          </h1>
+
+          <p class="hero-description fade-up fade-up-delay-2">
+            Pakistan's most trusted learning app for Class 9 &amp; 10 students. 
+            Video lectures, interactive quizzes, and detailed notes — all in one place. 
+            Built for Karachi Board, Aga Khan, O-Level &amp; IGCSE.
+          </p>
+
+          <div class="hero-actions fade-up fade-up-delay-3">
+            <a href="#download" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download Free
+            </a>
+            <a href="#how-it-works" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="10 8 16 12 10 16 10 8"/>
+              </svg>
+              How It Works
+            </a>
+          </div>
+
+          <div class="hero-stats fade-up fade-up-delay-4">
+            <div class="hero-stat">
+              <div class="hero-stat-number">10K+</div>
+              <div class="hero-stat-label">Students</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">500+</div>
+              <div class="hero-stat-label">Video Lectures</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">4.8</div>
+              <div class="hero-stat-label">App Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-up fade-up-delay-2">
+          <div class="phone-mockup-wrapper">
+            <div class="phone-glow"></div>
+            <img src="./images/phone-mockup.png" alt="Learn Smart App Screenshot" width="280" height="560">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label fade-up">Features</span>
+        <h2 class="section-title fade-up fade-up-delay-1">Everything You Need to<br>Excel in Exams</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2">A complete learning toolkit designed specifically for Pakistani students in Classes 9 and 10.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Video Lectures -->
+        <div class="feature-card fade-up fade-up-delay-1">
+          <div class="feature-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7"/>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Video Lectures</h3>
+          <p class="feature-description">High-quality video lessons by expert teachers. Watch anytime, rewind, and learn at your own pace.</p>
+        </div>
+
+        <!-- Feature 2: Interactive Quizzes -->
+        <div class="feature-card fade-up fade-up-delay-2">
+          <div class="feature-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Interactive Quizzes</h3>
+          <p class="feature-description">Test your knowledge with chapter-wise quizzes. Instant feedback and detailed explanations for every question.</p>
+        </div>
+
+        <!-- Feature 3: Detailed Notes -->
+        <div class="feature-card fade-up fade-up-delay-3">
+          <div class="feature-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Detailed Notes</h3>
+          <p class="feature-description">Comprehensive, exam-focused notes for every chapter. Concise summaries to help you revise quickly.</p>
+        </div>
+
+        <!-- Feature 4: Secure Content -->
+        <div class="feature-card fade-up fade-up-delay-4">
+          <div class="feature-icon red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Secure Content</h3>
+          <p class="feature-description">All content is protected and encrypted. Your learning materials stay safe and exclusive to verified students.</p>
+        </div>
+
+        <!-- Feature 5: Easy Payment -->
+        <div class="feature-card fade-up fade-up-delay-5">
+          <div class="feature-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Easy Payment</h3>
+          <p class="feature-description">Simple and affordable pricing. Pay via bank transfer, JazzCash, EasyPaisa, or other local methods.</p>
+        </div>
+
+        <!-- Feature 6: Leaderboard & Badges -->
+        <div class="feature-card fade-up fade-up-delay-5">
+          <div class="feature-icon teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6"/>
+              <path d="M12 3l-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287L12 3z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Leaderboard &amp; Badges</h3>
+          <p class="feature-description">Compete with classmates, earn badges for achievements, and track your progress on the leaderboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOARDS WE COVER ========== -->
+  <section class="boards section" id="boards">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label fade-up">Boards</span>
+        <h2 class="section-title fade-up fade-up-delay-1">Boards We Cover</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2">Tailored content for Pakistan's most popular education boards. Find your board and start learning.</p>
+      </div>
+
+      <div class="boards-grid">
+        <!-- Karachi Board -->
+        <div class="board-card fade-up fade-up-delay-1">
+          <div class="board-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3 class="board-card-title">Karachi Board</h3>
+          <p class="board-card-subtitle">BSEK — Complete Matric syllabus for Class 9 &amp; 10</p>
+        </div>
+
+        <!-- Aga Khan Board -->
+        <div class="board-card fade-up fade-up-delay-2">
+          <div class="board-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3 class="board-card-title">Aga Khan Board</h3>
+          <p class="board-card-subtitle">AKU-EB — Comprehensive exam preparation material</p>
+        </div>
+
+        <!-- O-Level -->
+        <div class="board-card fade-up fade-up-delay-3">
+          <div class="board-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"/>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+          </div>
+          <h3 class="board-card-title">O-Level</h3>
+          <p class="board-card-subtitle">Cambridge O-Level — International standard curriculum</p>
+        </div>
+
+        <!-- IGCSE -->
+        <div class="board-card fade-up fade-up-delay-4">
+          <div class="board-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/>
+            </svg>
+          </div>
+          <h3 class="board-card-title">IGCSE</h3>
+          <p class="board-card-subtitle">Cambridge IGCSE — Globally recognized qualification</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label fade-up">Getting Started</span>
+        <h2 class="section-title fade-up fade-up-delay-1">How It Works</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2">Get started in just 3 simple steps. No complicated setup, no confusion.</p>
+      </div>
+
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card fade-up fade-up-delay-1">
+          <div class="step-number">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Register</h3>
+          <p class="step-description">Create your account in seconds. Just enter your name, phone number, and select your board.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card fade-up fade-up-delay-2">
+          <div class="step-number">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+              <path d="M17 16l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Upload Payment</h3>
+          <p class="step-description">Pay the affordable fee via JazzCash, EasyPaisa, or bank transfer. Upload your receipt in the app.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card fade-up fade-up-delay-3">
+          <div class="step-number">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Start Learning</h3>
+          <p class="step-description">Access all video lectures, notes, and quizzes instantly. Your learning journey begins right away!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DOWNLOAD SECTION ========== -->
+  <section class="download section" id="download">
+    <div class="container">
+      <div class="download-inner">
+        <span class="section-label fade-up">Download Now</span>
+        <h2 class="section-title fade-up fade-up-delay-1" style="margin-top: 16px;">
+          Ready to Start Learning?
+        </h2>
+        <p class="section-subtitle fade-up fade-up-delay-2">
+          Download the Learn Smart app today and join thousands of Pakistani students who are already scoring higher in their exams.
+        </p>
+
+        <div class="download-buttons fade-up fade-up-delay-3">
+          <!-- APK Download -->
+          <a href="APK_URL_PLACEHOLDER" class="download-btn download-btn-primary" download>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download APK
+          </a>
+
+          <!-- Google Play -->
+          <a href="PLAYSTORE_URL_PLACEHOLDER" class="download-btn download-btn-secondary" target="_blank" rel="noopener noreferrer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+            </svg>
+            Get it on Google Play
+          </a>
+        </div>
+
+        <p class="download-note fade-up fade-up-delay-4">
+          &#10003; Free to download &nbsp;&bull;&nbsp; &#10003; No hidden charges &nbsp;&bull;&nbsp; &#10003; Safe &amp; secure
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label fade-up">FAQ</span>
+        <h2 class="section-title fade-up fade-up-delay-1">Frequently Asked Questions</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2">Got questions? We've got answers. Here are the most common things students and parents ask.</p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item fade-up fade-up-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            Which boards does Learn Smart cover?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Learn Smart covers <strong>Karachi Board (BSEK)</strong>, <strong>Aga Khan University Examination Board (AKU-EB)</strong>, <strong>Cambridge O-Level</strong>, and <strong>IGCSE</strong>. We provide board-specific content so you only study what's relevant to your exams.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item fade-up fade-up-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            How much does the app cost?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Learn Smart is very affordable. The app is free to download, and we charge a small monthly or yearly fee to access all premium content including video lectures, notes, and quizzes. Contact us for the latest pricing details.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item fade-up fade-up-delay-3">
+          <button class="faq-question" aria-expanded="false">
+            How do I pay for the subscription?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We accept multiple payment methods: <strong>JazzCash</strong>, <strong>EasyPaisa</strong>, <strong>bank transfer</strong>, and cash payment at our center. Simply make the payment, upload the receipt in the app, and your account will be activated within 24 hours.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item fade-up fade-up-delay-4">
+          <button class="faq-question" aria-expanded="false">
+            Can I use the app offline?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Video lectures require an internet connection to stream. However, notes and quiz features may work offline once loaded. We recommend using Wi-Fi for the best experience when watching video lectures.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item fade-up fade-up-delay-5">
+          <button class="faq-question" aria-expanded="false">
+            Is the app safe for my child to use?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutely. Learn Smart is designed specifically for education. We use <strong>secure content protection</strong> to prevent unauthorized sharing. There are no ads, no social media distractions, and no inappropriate content. It's a safe, focused learning environment for students.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item fade-up fade-up-delay-5">
+          <button class="faq-question" aria-expanded="false">
+            What subjects are available?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We cover all major subjects for Class 9 and 10 including <strong>Mathematics</strong>, <strong>Physics</strong>, <strong>Chemistry</strong>, <strong>Biology</strong>, <strong>English</strong>, <strong>Urdu</strong>, <strong>Pakistan Studies</strong>, and <strong>Islamiyat</strong>. More subjects are added regularly based on student demand.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">
+            <span class="footer-brand-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </span>
+            Learn Smart
+          </div>
+          <p class="footer-tagline">by The Initiators — Empowering Pakistani students.</p>
+        </div>
+
+        <div class="footer-social">
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 The Initiators. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING DOWNLOAD BUTTON (MOBILE) ========== -->
+  <div class="floating-download" id="floatingDownload">
+    <a href="#download" class="floating-download-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download Now — It's Free
+    </a>
+  </div>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ===== Intersection Observer for Scroll Animations =====
+      var observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      };
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Don't unobserve — keep it simple and performant
+          }
+        });
+      }, observerOptions);
+
+      // Observe all fade-up elements
+      var fadeElements = document.querySelectorAll('.fade-up');
+      for (var i = 0; i < fadeElements.length; i++) {
+        observer.observe(fadeElements[i]);
+      }
+
+      // ===== Navbar Scroll Effect =====
+      var navbar = document.getElementById('navbar');
+      var lastScrollY = 0;
+
+      function handleScroll() {
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        lastScrollY = scrollY;
+      }
+
+      // Throttle scroll handler
+      var scrollTicking = false;
+      window.addEventListener('scroll', function() {
+        if (!scrollTicking) {
+          window.requestAnimationFrame(function() {
+            handleScroll();
+            scrollTicking = false;
+          });
+          scrollTicking = true;
+        }
+      }, { passive: true });
+
+      // ===== Mobile Menu Toggle =====
+      var menuToggle = document.getElementById('menuToggle');
+      var mobileMenu = document.getElementById('mobileMenu');
+      var menuIconOpen = document.getElementById('menuIconOpen');
+      var menuIconClose = document.getElementById('menuIconClose');
+      var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      var isMenuOpen = false;
+
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          mobileMenu.classList.add('open');
+          menuIconOpen.style.display = 'none';
+          menuIconClose.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        } else {
+          mobileMenu.classList.remove('open');
+          menuIconOpen.style.display = 'block';
+          menuIconClose.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+      }
+
+      menuToggle.addEventListener('click', toggleMenu);
+
+      for (var j = 0; j < mobileNavLinks.length; j++) {
+        mobileNavLinks[j].addEventListener('click', function() {
+          if (isMenuOpen) toggleMenu();
+        });
+      }
+
+      // ===== FAQ Accordion =====
+      var faqItems = document.querySelectorAll('.faq-item');
+
+      for (var k = 0; k < faqItems.length; k++) {
+        (function(item) {
+          var question = item.querySelector('.faq-question');
+          var answer = item.querySelector('.faq-answer');
+          var answerInner = item.querySelector('.faq-answer-inner');
+
+          question.addEventListener('click', function() {
+            var isActive = item.classList.contains('active');
+
+            // Close all other items
+            for (var m = 0; m < faqItems.length; m++) {
+              faqItems[m].classList.remove('active');
+              faqItems[m].querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+              faqItems[m].querySelector('.faq-answer').style.maxHeight = '0';
+            }
+
+            // Toggle current item
+            if (!isActive) {
+              item.classList.add('active');
+              question.setAttribute('aria-expanded', 'true');
+              answer.style.maxHeight = answerInner.scrollHeight + 20 + 'px';
+            }
+          });
+        })(faqItems[k]);
+      }
+
+      // ===== Smooth Scroll for Anchor Links =====
+      var anchorLinks = document.querySelectorAll('a[href^="#"]');
+      for (var l = 0; l < anchorLinks.length; l++) {
+        anchorLinks[l].addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          var target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            var navHeight = navbar.offsetHeight;
+            var targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+            window.scrollTo({
+              top: targetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+
+      // ===== Hide floating button when near download section =====
+      var floatingBtn = document.getElementById('floatingDownload');
+      var downloadSection = document.getElementById('download');
+
+      if (floatingBtn && downloadSection) {
+        var floatObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              floatingBtn.style.opacity = '0';
+              floatingBtn.style.pointerEvents = 'none';
+            } else {
+              floatingBtn.style.opacity = '1';
+              floatingBtn.style.pointerEvents = '';
+            }
+          });
+        }, { threshold: 0.3 });
+
+        floatObserver.observe(downloadSection);
+      }
+
+      // Run scroll handler once on load
+      handleScroll();
+    })();
+  </script>
+</body>
+</html>
