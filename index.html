@@ -36,9 +36,9 @@
       --primary-light: #111111;
       --card-bg: #111111;
       --card-border: #1e1e1e;
-      --accent: #FF6A00;
-      --accent-hover: #e65c00;
-      --accent-glow: rgba(255, 106, 0, 0.15);
+      --accent: #3B82F6;
+      --accent-hover: #2563EB;
+      --accent-glow: rgba(59, 130, 246, 0.15);
       --green: #22c55e;
       --green-glow: rgba(34, 197, 94, 0.15);
       --white: #ffffff;
@@ -107,8 +107,8 @@
       100% { transform: translateY(100vh); opacity: 0; }
     }
     @keyframes pulse-border {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.4); }
-      50% { box-shadow: 0 0 0 16px rgba(255, 106, 0, 0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+      50% { box-shadow: 0 0 0 16px rgba(59, 130, 246, 0); }
     }
     @keyframes slide-in-bottom {
       0% { transform: translateY(100%); opacity: 0; }
@@ -125,7 +125,7 @@
     .section-header { text-align: center; margin-bottom: 56px; }
     .section-label {
       display: inline-block;
-      background: rgba(255, 106, 0, 0.1);
+      background: rgba(59, 130, 246, 0.1);
       color: var(--accent);
       font-size: 0.78rem;
       font-weight: 700;
@@ -185,7 +185,7 @@
       padding: 8px 20px; border-radius: 8px; font-weight: 600; font-size: 0.85rem;
       transition: var(--transition); overflow: hidden;
     }
-    .navbar-cta:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3); }
+    .navbar-cta:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
     .navbar-cta::after { display: none !important; }
 
     .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: white; }
@@ -227,7 +227,7 @@
     .hero-lines { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
     .hero-line {
       position: absolute; width: 1px; height: 120px;
-      background: linear-gradient(to bottom, transparent, rgba(255, 106, 0, 0.15), transparent);
+      background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.15), transparent);
       animation: line-slide 6s linear infinite;
     }
     .hero-line:nth-child(1) { left: 15%; animation-delay: 0s; }
@@ -238,7 +238,7 @@
 
     .hero-glow {
       position: absolute; top: 50%; right: 15%; width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(255, 106, 0, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
       border-radius: 50%; transform: translate(0, -50%);
       animation: pulse-glow-anim 6s ease-in-out infinite; pointer-events: none;
     }
@@ -253,7 +253,7 @@
     .hero-content { flex: 1; min-width: 0; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255, 106, 0, 0.08); border: 1px solid rgba(255, 106, 0, 0.15);
+      background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.15);
       color: var(--accent); font-size: 0.82rem; font-weight: 600;
       padding: 8px 18px; border-radius: 100px; margin-bottom: 32px;
     }
@@ -267,14 +267,14 @@
     }
     .hero-title .accent {
       color: var(--accent); position: relative;
-      text-shadow: 0 0 60px rgba(255, 106, 0, 0.4);
+      text-shadow: 0 0 60px rgba(59, 130, 246, 0.4);
     }
     .hero-letter {
       display: inline-block; opacity: 0;
       transform: translateY(80px) rotateX(-40deg);
       animation: letterReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    .hero-letter.accent { color: var(--accent); text-shadow: 0 0 60px rgba(255, 106, 0, 0.4); }
+    .hero-letter.accent { color: var(--accent); text-shadow: 0 0 60px rgba(59, 130, 246, 0.4); }
     .hero-description {
       font-size: 1.1rem; color: var(--text); line-height: 1.8;
       margin-bottom: 40px; max-width: 480px;
@@ -287,7 +287,7 @@
       padding: 16px 32px; border-radius: 12px; border: none; cursor: pointer;
       transition: var(--transition); text-decoration: none; overflow: hidden;
     }
-    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255, 106, 0, 0.35); }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59, 130, 246, 0.35); }
     .btn-primary:active { transform: translateY(0); }
 
     .btn-secondary {
@@ -311,8 +311,9 @@
     .hero-visual { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; }
     .phone-mockup-wrapper { position: relative; animation: float 6s ease-in-out infinite; }
     .phone-mockup-wrapper img {
-      width: 300px; height: auto; border-radius: 36px;
-      box-shadow: 0 40px 100px rgba(255, 106, 0, 0.25), 0 20px 60px rgba(0, 0, 0, 0.5);
+      width: 300px; height: auto; border-radius: 0;
+      mix-blend-mode: screen;
+      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
       transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); position: relative; z-index: 2;
     }
@@ -320,14 +321,14 @@
     .phone-glow {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
       width: 400px; height: 650px;
-      background: radial-gradient(ellipse, rgba(255, 106, 0, 0.18) 0%, rgba(255, 106, 0, 0.05) 40%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.06) 40%, transparent 70%);
       filter: blur(40px); pointer-events: none; z-index: 1;
       animation: pulse-glow-anim 5s ease-in-out infinite;
     }
     .phone-shadow {
       position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);
       width: 280px; height: 50px;
-      background: radial-gradient(ellipse, rgba(255, 106, 0, 0.2) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
       filter: blur(25px); z-index: 0;
     }
 
@@ -384,7 +385,7 @@
       background: linear-gradient(90deg, var(--accent), transparent);
       opacity: 0; transition: opacity 0.4s ease;
     }
-    .feature-card:hover { transform: translateY(-6px); border-color: rgba(255, 106, 0, 0.2); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+    .feature-card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.2); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
     .feature-card:hover::before { opacity: 1; }
     .feature-icon {
       width: 52px; height: 52px; border-radius: 12px;
@@ -396,7 +397,7 @@
     .feature-icon.blue { background: rgba(59, 130, 246, 0.12); color: #60a5fa; }
     .feature-icon.green { background: rgba(34, 197, 94, 0.12); color: #4ade80; }
     .feature-icon.white-icon { background: rgba(255, 255, 255, 0.15); color: #ffffff; }
-    .feature-icon.orange { background: rgba(255, 106, 0, 0.12); color: var(--accent); }
+    .feature-icon.orange { background: rgba(59, 130, 246, 0.12); color: var(--accent); }
     .feature-title { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; letter-spacing: -0.01em; }
     .feature-description { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
 
@@ -413,9 +414,9 @@
     .features-white { background: var(--white); }
     .features-white .section-title { color: #0A0A0A; }
     .features-white .section-subtitle { color: #666666; }
-    .features-white .section-label { background: rgba(255, 106, 0, 0.1); color: var(--accent); }
+    .features-white .section-label { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
     .features-white .feature-card { background: #f5f5f5; border-color: #e5e5e5; }
-    .features-white .feature-card:hover { background: #eeeeee; border-color: rgba(255, 106, 0, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); }
+    .features-white .feature-card:hover { background: #eeeeee; border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); }
     .features-white .feature-title { color: #0A0A0A; }
     .features-white .feature-description { color: #666666; }
     .features-white .feature-card::before { background: linear-gradient(90deg, var(--accent), transparent); }
@@ -428,10 +429,10 @@
       border: 1px solid var(--card-border); text-align: center;
       transition: var(--transition); position: relative; overflow: hidden;
     }
-    .board-card:hover { transform: translateY(-6px); border-color: rgba(255, 106, 0, 0.2); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+    .board-card:hover { transform: translateY(-6px); border-color: rgba(59, 130, 246, 0.2); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
     .board-card-icon {
       width: 68px; height: 68px; border-radius: 50%;
-      background: rgba(255, 106, 0, 0.08); display: flex; align-items: center; justify-content: center;
+      background: rgba(59, 130, 246, 0.08); display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px; transition: var(--transition);
     }
     .board-card:hover .board-card-icon { background: var(--accent); transform: scale(1.08); }
@@ -445,21 +446,21 @@
     .how-it-works-glow {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
       width: 600px; height: 400px;
-      background: radial-gradient(ellipse, rgba(255, 106, 0, 0.06) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
       pointer-events: none;
     }
     .how-it-works .section-title { color: var(--white); }
     .how-it-works .section-subtitle { color: var(--text); }
-    .how-it-works .section-label { background: rgba(255, 106, 0, 0.1); color: var(--accent); }
+    .how-it-works .section-label { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
     .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
     .steps-grid::before {
       content: ''; position: absolute; top: 44px; left: 16%; right: 16%; height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(255, 106, 0, 0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
     }
     .step-card { text-align: center; position: relative; }
     .step-number {
       width: 88px; height: 88px; border-radius: 50%;
-      background: rgba(255, 106, 0, 0.06); border: 2px solid rgba(255, 106, 0, 0.15);
+      background: rgba(59, 130, 246, 0.06); border: 2px solid rgba(59, 130, 246, 0.15);
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 28px; font-size: 1.6rem; font-weight: 800; color: var(--accent);
       position: relative; z-index: 1; transition: var(--transition);
@@ -469,6 +470,77 @@
     .step-number svg { width: 32px; height: 32px; color: var(--accent); transition: var(--transition); }
     .step-title { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
     .step-description { font-size: 0.9rem; color: var(--text); line-height: 1.7; max-width: 280px; margin: 0 auto; }
+
+    /* ========== TESTIMONIALS ========== */
+    .testimonials { background: var(--primary); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border: 1px solid var(--card-border);
+      transition: var(--transition);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(59, 130, 246, 0.2);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    .testimonial-card:hover::before { opacity: 1; }
+    .testimonial-stars {
+      color: var(--accent);
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .testimonial-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(59, 130, 246, 0.12);
+      color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-size: 0.95rem; font-weight: 700; color: var(--white);
+    }
+    .testimonial-role {
+      font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
 
     /* ========== VIDEOS ========== */
     .videos { background: var(--primary-light); overflow: hidden; }
@@ -483,7 +555,7 @@
       flex: 0 0 360px; scroll-snap-align: start; background: var(--card-bg);
       border-radius: 20px; overflow: hidden; border: 1px solid var(--card-border); transition: var(--transition);
     }
-    .video-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); border-color: rgba(255, 106, 0, 0.2); }
+    .video-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); border-color: rgba(59, 130, 246, 0.2); }
     .video-card-wrapper { position: relative; width: 100%; padding-top: 56.25%; background: var(--primary); }
     .video-card-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
     .video-card-info { padding: 20px; }
@@ -492,7 +564,7 @@
       letter-spacing: 0.08em; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
     }
     .video-card-label.tutorial { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
-    .video-card-label.promo { background: rgba(255, 106, 0, 0.15); color: var(--accent); }
+    .video-card-label.promo { background: rgba(59, 130, 246, 0.15); color: var(--accent); }
     .video-card-title { font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.4; }
     .video-scroll-hint { text-align: center; margin-top: 16px; color: var(--text-muted); font-size: 0.85rem; }
 
@@ -540,8 +612,8 @@
       background: var(--card-bg); border-radius: 16px; border: 1px solid var(--card-border);
       margin-bottom: 12px; overflow: hidden; transition: var(--transition);
     }
-    .faq-item:hover { border-color: rgba(255, 106, 0, 0.15); }
-    .faq-item.active { border-color: rgba(255, 106, 0, 0.25); box-shadow: 0 8px 24px rgba(255, 106, 0, 0.06); }
+    .faq-item:hover { border-color: rgba(59, 130, 246, 0.15); }
+    .faq-item.active { border-color: rgba(59, 130, 246, 0.25); box-shadow: 0 8px 24px rgba(59, 130, 246, 0.06); }
     .faq-question {
       display: flex; align-items: center; justify-content: space-between;
       padding: 22px 24px; cursor: pointer; background: none; border: none; width: 100%;
@@ -605,7 +677,7 @@
       width: 100%; padding: 16px; background: var(--accent); color: var(--primary);
       font-size: 1rem; font-weight: 700; border: none; border-radius: 14px; cursor: pointer;
       text-decoration: none; pointer-events: all; transition: var(--transition);
-      box-shadow: 0 -4px 20px rgba(255, 106, 0, 0.3);
+      box-shadow: 0 -4px 20px rgba(59, 130, 246, 0.3);
     }
     .floating-download-btn:hover { background: var(--accent-hover); }
 
@@ -626,7 +698,7 @@
       .hero-description { margin: 0 auto 36px; font-size: 1rem; }
       .hero-actions { justify-content: center; }
       .hero-stats { justify-content: center; }
-      .phone-mockup-wrapper img { width: 240px; transform: none; border-radius: 28px; }
+      .phone-mockup-wrapper img { width: 240px; transform: none; border-radius: 0; }
       .phone-mockup-wrapper:hover img { transform: scale(1.02); }
       .features-grid { grid-template-columns: 1fr; }
       .boards-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -666,6 +738,7 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#boards">Boards</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#videos">Videos</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#download" class="navbar-cta">Download App</a></li>
@@ -684,6 +757,7 @@
     <a href="#features" class="mobile-nav-link">Features</a>
     <a href="#boards" class="mobile-nav-link">Boards</a>
     <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+    <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
     <a href="#videos" class="mobile-nav-link">Videos</a>
     <a href="#faq" class="mobile-nav-link">FAQ</a>
     <a href="#download" class="mobile-cta mobile-nav-link">Download App</a>
@@ -1006,6 +1080,81 @@
           <h3 class="step-title">Start Learning</h3>
           <p class="step-description">Access all video lectures, notes, and quizzes instantly. Your journey begins now!</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <span class="section-label fade-up">Testimonials</span>
+        <h2 class="section-title fade-up fade-up-delay-1">What Our Users Say</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">Join thousands of students who trust Learn Smart for academic excellence.</p>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-up fade-up-delay-1">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"My grades improved from C to A* in just one term. The video lectures are incredibly clear and easy to follow."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AH</div>
+            <div>
+              <div class="testimonial-name">Ahmed Hassan</div>
+              <div class="testimonial-role">O-Level Student, Karachi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-up fade-up-delay-2">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"The quizzes helped my daughter identify her weak areas and improve significantly. Highly recommended for all parents."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">FN</div>
+            <div>
+              <div class="testimonial-name">Fatima Noor</div>
+              <div class="testimonial-role">Parent, Aga Khan Board</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-up fade-up-delay-3">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Best learning app for Pakistani students. The notes are perfectly aligned with our Karachi Board syllabus."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">BK</div>
+            <div>
+              <div class="testimonial-name">Bilal Khan</div>
+              <div class="testimonial-role">Class 10 Student, Karachi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-up fade-up-delay-4">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"The progress tracking feature keeps me motivated. I can see exactly how much I've improved each week."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <div class="testimonial-name">Sana Mahmood</div>
+              <div class="testimonial-role">IGCSE Student, Lahore</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-up fade-up-delay-5">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Affordable and effective. Much better than expensive tuition centers. Every Pakistani student should use this."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RZ</div>
+            <div>
+              <div class="testimonial-name">Rizwan Ahmed</div>
+              <div class="testimonial-role">Parent, Cambridge Board</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
