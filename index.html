@@ -402,14 +402,14 @@
     .feature-description { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
 
     .features-orange { background: var(--accent); }
-    .features-orange .section-title { color: var(--primary); }
-    .features-orange .section-subtitle { color: rgba(0,0,0,0.7); }
-    .features-orange .section-label { background: rgba(0,0,0,0.1); color: var(--primary); }
-    .features-orange .feature-card { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.2); }
-    .features-orange .feature-card:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.3); }
-    .features-orange .feature-title { color: var(--primary); }
-    .features-orange .feature-description { color: rgba(0,0,0,0.7); }
-    .features-orange .feature-card::before { background: linear-gradient(90deg, var(--primary), transparent); }
+    .features-orange .section-title { color: var(--white); }
+    .features-orange .section-subtitle { color: rgba(255,255,255,0.8); }
+    .features-orange .section-label { background: rgba(255,255,255,0.15); color: var(--white); }
+    .features-orange .feature-card { background: var(--primary); border-color: var(--card-border); }
+    .features-orange .feature-card:hover { background: #111; border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); }
+    .features-orange .feature-title { color: var(--white); }
+    .features-orange .feature-description { color: var(--text); }
+    .features-orange .feature-card::before { background: linear-gradient(90deg, var(--accent), transparent); }
 
     .features-white { background: var(--white); }
     .features-white .section-title { color: #0A0A0A; }
@@ -570,23 +570,23 @@
 
     /* ========== DOWNLOAD ========== */
     .download {
-      background: linear-gradient(135deg, var(--accent) 0%, #ff8c33 50%, var(--accent) 100%);
+      background: var(--primary);
       position: relative; overflow: hidden;
     }
     .download::before {
       content: ''; position: absolute; top: -200px; right: -200px;
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%); border-radius: 50%;
     }
     .download::after {
       content: ''; position: absolute; bottom: -200px; left: -200px;
       width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(0,0,0,0.08) 0%, transparent 70%); border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 70%); border-radius: 50%;
     }
     .download-inner { position: relative; z-index: 1; text-align: center; max-width: 700px; margin: 0 auto; }
-    .download .section-title { color: var(--primary); font-size: 3rem; }
-    .download .section-subtitle { color: rgba(0,0,0,0.7); font-size: 1.1rem; }
-    .download .section-label { background: rgba(0,0,0,0.1); color: var(--primary); }
+    .download .section-title { color: var(--white); font-size: 3rem; }
+    .download .section-subtitle { color: var(--text); font-size: 1.1rem; }
+    .download .section-label { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
     .download-buttons {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
       margin-top: 44px; max-width: 580px; margin-left: auto; margin-right: auto;
@@ -596,14 +596,14 @@
       border-radius: 16px; font-weight: 700; font-size: 1rem; cursor: pointer;
       transition: var(--transition); text-decoration: none; border: none; position: relative; overflow: hidden;
     }
-    .download-btn-primary { background: var(--primary); color: var(--accent); }
-    .download-btn-primary:hover { background: #1a1a1a; transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3); }
+    .download-btn-primary { background: var(--white); color: var(--primary); }
+    .download-btn-primary:hover { background: #f0f0f0; transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 50px rgba(255, 255, 255, 0.15); }
     .download-btn-secondary {
-      background: rgba(0,0,0,0.08); color: var(--primary);
-      border: 1px solid rgba(0,0,0,0.15);
+      background: rgba(255,255,255,0.06); color: var(--white);
+      border: 1px solid rgba(255,255,255,0.12);
     }
-    .download-btn-secondary:hover { background: rgba(0,0,0,0.15); border-color: rgba(0,0,0,0.25); transform: translateY(-3px); }
-    .download-note { color: rgba(0,0,0,0.6); font-size: 0.82rem; margin-top: 24px; }
+    .download-btn-secondary:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); transform: translateY(-3px); }
+    .download-note { color: var(--text-muted); font-size: 0.82rem; margin-top: 24px; }
 
     /* ========== FAQ ========== */
     .faq { background: var(--primary); }
