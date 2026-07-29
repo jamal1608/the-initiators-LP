@@ -1,76 +1,62 @@
-e<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- SEO Meta Tags -->
   <title>The Initiators — Learn Smart | Download App</title>
   <meta name="description" content="Learn Smart by The Initiators — Pakistan's #1 learning app for Class 9-10 students. Video lectures, quizzes, notes for Karachi Board, Aga Khan, O-Level & IGCSE. Download now!">
   <meta name="keywords" content="Learn Smart, The Initiators, Pakistani students, Karachi Board, Aga Khan Board, O-Level, IGCSE, Class 9, Class 10, Matric, education app, video lectures, online learning">
   <meta name="author" content="The Initiators">
   <meta name="robots" content="index, follow">
-
-  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Initiators — Learn Smart | Download App">
   <meta property="og:description" content="Pakistan's #1 learning app for Class 9-10 students. Video lectures, quizzes, notes for all major boards. Download now!">
   <meta property="og:image" content="./images/phone-mockup.png">
   <meta property="og:url" content="https://learnsmart.theinitiators.pk">
   <meta property="og:site_name" content="The Initiators — Learn Smart">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Initiators — Learn Smart | Download App">
   <meta name="twitter:description" content="Pakistan's #1 learning app for Class 9-10 students. Download now!">
   <meta name="twitter:image" content="./images/phone-mockup.png">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="./images/icon.png">
-
-  <!-- Theme Color for Mobile Browsers -->
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#0A0A0A">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    /* ========== RESET & BASE ========== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --primary: #0a0a0a;
-      --primary-light: #141414;
-      --card-bg: #1a1a1a;
-      --card-border: #2a2a2a;
-      --accent: #f59e0b;
-      --accent-hover: #d97706;
-      --accent-glow: rgba(245, 158, 11, 0.15);
+      --primary: #0A0A0A;
+      --primary-light: #111111;
+      --card-bg: #111111;
+      --card-border: #1e1e1e;
+      --accent: #FF6A00;
+      --accent-hover: #e65c00;
+      --accent-glow: rgba(255, 106, 0, 0.15);
       --green: #22c55e;
       --green-glow: rgba(34, 197, 94, 0.15);
       --white: #ffffff;
-      --text: #b5b5b5;
+      --text: #999999;
       --text-dark: #e5e5e5;
       --text-muted: #737373;
-      --border: #2a2a2a;
+      --border: #1e1e1e;
       --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
       --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.05);
       --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
       --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.06);
-      --radius: 12px;
+      --radius: 16px;
       --radius-lg: 16px;
-      --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Naskh Arabic', 'Noto Sans Urdu', 'Jameel Noori Nastaleeq', sans-serif;
+      --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
     body {
       font-family: var(--font-stack);
@@ -82,329 +68,64 @@ e<!DOCTYPE html>
       -moz-osx-font-smoothing: grayscale;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ========== ANIMATIONS ========== */
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
     .fade-up-delay-1 { transition-delay: 0.1s; }
     .fade-up-delay-2 { transition-delay: 0.2s; }
     .fade-up-delay-3 { transition-delay: 0.3s; }
     .fade-up-delay-4 { transition-delay: 0.4s; }
     .fade-up-delay-5 { transition-delay: 0.5s; }
 
-    /* ========== SCROLL REVEAL ANIMATION ========== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(60px);
-      filter: blur(8px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                  filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    .reveal-delay-5 { transition-delay: 0.5s; }
-    .reveal-delay-6 { transition-delay: 0.6s; }
-
-    /* ========== HERO LETTER ANIMATIONS ========== */
-    .hero-letter {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(80px) rotateX(-40deg);
-      animation: letterReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .hero-letter.accent {
-      color: var(--accent);
-      text-shadow: 0 0 60px rgba(245, 158, 11, 0.4);
-    }
-
     @keyframes letterReveal {
       0% { opacity: 0; transform: translateY(80px) rotateX(-40deg); }
       100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-12px); }
     }
-
-    @keyframes float-slow {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-10px) rotate(2deg); }
-    }
-
-    @keyframes pulse-glow {
+    @keyframes pulse-glow-anim {
       0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
       50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
     }
-
     @keyframes particle-drift {
       0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
       25% { transform: translate(20px, -30px) scale(1.2); opacity: 0.6; }
       50% { transform: translate(-10px, -60px) scale(0.8); opacity: 0.4; }
       75% { transform: translate(15px, -40px) scale(1.1); opacity: 0.5; }
     }
-
     @keyframes line-slide {
       0% { transform: translateY(-100%); opacity: 0; }
       50% { opacity: 1; }
       100% { transform: translateY(100vh); opacity: 0; }
     }
-
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
-      50% { box-shadow: 0 0 0 16px rgba(245, 158, 11, 0); }
+    @keyframes pulse-border {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.4); }
+      50% { box-shadow: 0 0 0 16px rgba(255, 106, 0, 0); }
     }
-
-    @keyframes shimmer {
-      0% { background-position: -200% center; }
-      100% { background-position: 200% center; }
-    }
-
     @keyframes slide-in-bottom {
       0% { transform: translateY(100%); opacity: 0; }
       100% { transform: translateY(0); opacity: 1; }
     }
-
-    /* ========== NAVBAR ========== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(10, 10, 10, 0.8);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      transition: var(--transition);
+    @keyframes countdown-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
-    .navbar.scrolled {
-      background: rgba(10, 10, 10, 0.95);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    .navbar-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-    }
-
-    .navbar-brand .brand-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--accent);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .navbar-brand .brand-icon-img {
-      width: 36px;
-      height: 36px;
-      object-fit: contain;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-
-    .navbar-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .navbar-links a {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      font-weight: 500;
-      transition: var(--transition);
-      position: relative;
-    }
-
-    .navbar-links a:hover,
-    .navbar-links a:focus {
-      color: var(--white);
-    }
-
-    .navbar-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 1px;
-      transition: width 0.3s ease;
-    }
-
-    .navbar-links a:hover::after {
-      width: 100%;
-    }
-
-    .navbar-cta {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent);
-      color: var(--primary) !important;
-      padding: 8px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      transition: var(--transition);
-      overflow: hidden;
-    }
-
-    .navbar-cta:hover {
-      background: var(--accent-hover);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
-    }
-
-    .navbar-cta::after {
-      display: none !important;
-    }
-
-    .btn-text-layer {
-      position: relative;
-      height: 1.2em;
-      overflow: hidden;
-    }
-
-    .btn-text-layer span {
-      display: block;
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .navbar-cta:hover .btn-text-layer span {
-      transform: translateY(-100%);
-    }
-
-    /* Mobile menu toggle */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      color: white;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 64px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(10, 10, 10, 0.98);
-      backdrop-filter: blur(20px);
-      z-index: 999;
-      padding: 32px 24px;
-      animation: slide-in-bottom 0.3s ease forwards;
-    }
-
-    .mobile-menu.open {
-      display: block;
-    }
-
-    .mobile-menu a {
-      display: block;
-      color: var(--text);
-      font-size: 1.1rem;
-      font-weight: 500;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      transition: var(--transition);
-    }
-
-    .mobile-menu a:hover {
-      color: var(--accent);
-      padding-left: 8px;
-    }
-
-    .mobile-menu .mobile-cta {
-      display: inline-block;
-      margin-top: 24px;
-      background: var(--accent);
-      color: var(--primary);
-      padding: 14px 32px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    /* ========== CONTAINER ========== */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* ========== SECTION STYLES ========== */
-    .section {
-      padding: 100px 0;
-      position: relative;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
+    .section { padding: 100px 0; position: relative; }
+    .section-header { text-align: center; margin-bottom: 56px; }
     .section-label {
       display: inline-block;
-      background: rgba(245, 158, 11, 0.1);
+      background: rgba(255, 106, 0, 0.1);
       color: var(--accent);
       font-size: 0.78rem;
       font-weight: 700;
@@ -414,7 +135,6 @@ e<!DOCTYPE html>
       text-transform: uppercase;
       margin-bottom: 20px;
     }
-
     .section-title {
       font-size: 2.8rem;
       font-weight: 800;
@@ -423,7 +143,6 @@ e<!DOCTYPE html>
       letter-spacing: -0.03em;
       margin-bottom: 16px;
     }
-
     .section-subtitle {
       font-size: 1.05rem;
       color: var(--text);
@@ -431,36 +150,71 @@ e<!DOCTYPE html>
       line-height: 1.7;
     }
 
-    /* ========== HERO SECTION ========== */
+    /* ========== NAVBAR ========== */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: var(--transition);
+    }
+    .navbar.scrolled { background: rgba(10, 10, 10, 0.95); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); }
+    .navbar-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .navbar-brand {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--white); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em;
+    }
+    .navbar-brand .brand-icon-img { width: 36px; height: 36px; object-fit: contain; border-radius: 8px; flex-shrink: 0; }
+    .navbar-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .navbar-links a {
+      color: var(--text-muted); font-size: 0.88rem; font-weight: 500;
+      transition: var(--transition); position: relative;
+    }
+    .navbar-links a:hover, .navbar-links a:focus { color: var(--white); }
+    .navbar-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+      background: var(--accent); border-radius: 1px; transition: width 0.3s ease;
+    }
+    .navbar-links a:hover::after { width: 100%; }
+    .navbar-cta {
+      position: relative; display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: var(--primary) !important;
+      padding: 8px 20px; border-radius: 8px; font-weight: 600; font-size: 0.85rem;
+      transition: var(--transition); overflow: hidden;
+    }
+    .navbar-cta:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3); }
+    .navbar-cta::after { display: none !important; }
+
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: white; }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+      background: rgba(10, 10, 10, 0.98); backdrop-filter: blur(20px);
+      z-index: 999; padding: 32px 24px; animation: slide-in-bottom 0.3s ease forwards;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; color: var(--text); font-size: 1.1rem; font-weight: 500;
+      padding: 18px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.06); transition: var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--accent); padding-left: 8px; }
+    .mobile-menu .mobile-cta {
+      display: inline-block; margin-top: 24px; background: var(--accent); color: var(--primary);
+      padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: 1rem; text-align: center;
+    }
+
+    /* ========== HERO ========== */
     .hero {
-      background: var(--primary);
-      position: relative;
-      overflow: hidden;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 80px;
-      padding-bottom: 40px;
+      background: var(--primary); position: relative; overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center; padding-top: 80px; padding-bottom: 40px;
     }
-
-    /* Background particles */
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
+    .hero-particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
     .hero-particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: var(--accent);
-      border-radius: 50%;
-      opacity: 0;
-      animation: particle-drift 8s ease-in-out infinite;
+      position: absolute; width: 4px; height: 4px; background: var(--accent);
+      border-radius: 50%; opacity: 0; animation: particle-drift 8s ease-in-out infinite;
     }
-
     .hero-particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
     .hero-particle:nth-child(2) { left: 20%; top: 60%; animation-delay: 1.5s; }
     .hero-particle:nth-child(3) { left: 75%; top: 30%; animation-delay: 3s; }
@@ -470,1224 +224,482 @@ e<!DOCTYPE html>
     .hero-particle:nth-child(7) { left: 65%; top: 50%; animation-delay: 5s; width: 5px; height: 5px; }
     .hero-particle:nth-child(8) { left: 90%; top: 10%; animation-delay: 7s; }
 
-    /* Background lines */
-    .hero-lines {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
+    .hero-lines { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
     .hero-line {
-      position: absolute;
-      width: 1px;
-      height: 120px;
-      background: linear-gradient(to bottom, transparent, rgba(245, 158, 11, 0.15), transparent);
+      position: absolute; width: 1px; height: 120px;
+      background: linear-gradient(to bottom, transparent, rgba(255, 106, 0, 0.15), transparent);
       animation: line-slide 6s linear infinite;
     }
-
     .hero-line:nth-child(1) { left: 15%; animation-delay: 0s; }
     .hero-line:nth-child(2) { left: 35%; animation-delay: 2s; }
     .hero-line:nth-child(3) { left: 55%; animation-delay: 4s; }
     .hero-line:nth-child(4) { left: 75%; animation-delay: 1s; }
     .hero-line:nth-child(5) { left: 90%; animation-delay: 3s; }
 
-    /* Glow orb */
     .hero-glow {
-      position: absolute;
-      top: 50%;
-      right: 15%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-      transform: translate(0, -50%);
-      animation: pulse-glow 6s ease-in-out infinite;
-      pointer-events: none;
+      position: absolute; top: 50%; right: 15%; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(255, 106, 0, 0.08) 0%, transparent 70%);
+      border-radius: 50%; transform: translate(0, -50%);
+      animation: pulse-glow-anim 6s ease-in-out infinite; pointer-events: none;
     }
-
     .hero-glow-green {
-      position: absolute;
-      top: 30%;
-      left: 10%;
-      width: 400px;
-      height: 400px;
+      position: absolute; top: 30%; left: 10%; width: 400px; height: 400px;
       background: radial-gradient(circle, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: pulse-glow 8s ease-in-out infinite 2s;
-      pointer-events: none;
+      border-radius: 50%; animation: pulse-glow-anim 8s ease-in-out infinite 2s; pointer-events: none;
     }
+    .hero::before, .hero::after { display: none; }
 
-    .hero::before {
-      display: none;
-    }
-
-    .hero::after {
-      display: none;
-    }
-
-    .hero-inner {
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-content {
-      flex: 1;
-      min-width: 0;
-    }
-
+    .hero-inner { display: flex; align-items: center; gap: 60px; position: relative; z-index: 1; }
+    .hero-content { flex: 1; min-width: 0; }
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(245, 158, 11, 0.08);
-      border: 1px solid rgba(245, 158, 11, 0.15);
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 8px 18px;
-      border-radius: 100px;
-      margin-bottom: 32px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255, 106, 0, 0.08); border: 1px solid rgba(255, 106, 0, 0.15);
+      color: var(--accent); font-size: 0.82rem; font-weight: 600;
+      padding: 8px 18px; border-radius: 100px; margin-bottom: 32px;
     }
-
     .hero-badge-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      animation: pulse-glow 2s infinite;
+      width: 6px; height: 6px; background: var(--accent); border-radius: 50%;
+      animation: pulse-border 2s infinite;
     }
-
     .hero-title {
-      font-size: 4.5rem;
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin-bottom: 8px;
+      font-size: 4.5rem; font-weight: 900; color: var(--white);
+      line-height: 1.05; letter-spacing: -0.04em; margin-bottom: 8px;
     }
-
     .hero-title .accent {
-      color: var(--accent);
-      position: relative;
-      text-shadow: 0 0 60px rgba(245, 158, 11, 0.4);
+      color: var(--accent); position: relative;
+      text-shadow: 0 0 60px rgba(255, 106, 0, 0.4);
     }
-
+    .hero-letter {
+      display: inline-block; opacity: 0;
+      transform: translateY(80px) rotateX(-40deg);
+      animation: letterReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .hero-letter.accent { color: var(--accent); text-shadow: 0 0 60px rgba(255, 106, 0, 0.4); }
     .hero-description {
-      font-size: 1.1rem;
-      color: var(--text);
-      line-height: 1.8;
-      margin-bottom: 40px;
-      max-width: 480px;
+      font-size: 1.1rem; color: var(--text); line-height: 1.8;
+      margin-bottom: 40px; max-width: 480px;
     }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 40px;
-    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 40px; }
 
     .btn-primary {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--accent);
-      color: var(--primary);
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 16px 32px;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      transition: var(--transition);
-      text-decoration: none;
-      overflow: hidden;
+      position: relative; display: inline-flex; align-items: center; gap: 10px;
+      background: var(--accent); color: var(--primary); font-size: 1rem; font-weight: 700;
+      padding: 16px 32px; border-radius: 12px; border: none; cursor: pointer;
+      transition: var(--transition); text-decoration: none; overflow: hidden;
     }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.35);
-    }
-
-    .btn-primary:active {
-      transform: translateY(0);
-    }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255, 106, 0, 0.35); }
+    .btn-primary:active { transform: translateY(0); }
 
     .btn-secondary {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--white);
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 16px 32px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      cursor: pointer;
-      transition: var(--transition);
-      text-decoration: none;
-      overflow: hidden;
+      position: relative; display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255, 255, 255, 0.06); color: var(--white); font-size: 1rem; font-weight: 600;
+      padding: 16px 32px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer; transition: var(--transition); text-decoration: none; overflow: hidden;
     }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
+    .btn-text-stack { position: relative; height: 1.3em; overflow: hidden; }
+    .btn-text-stack span { display: block; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .btn-text-stack .btn-alt { position: absolute; top: 0; left: 0; transform: translateY(100%); }
+    .btn-primary:hover .btn-text-stack span, .btn-secondary:hover .btn-text-stack span { transform: translateY(-100%); }
 
-    .btn-text-stack {
-      position: relative;
-      height: 1.3em;
-      overflow: hidden;
-    }
+    .hero-stats { display: flex; gap: 36px; }
+    .hero-stat { text-align: left; }
+    .hero-stat-number { font-size: 1.8rem; font-weight: 800; color: var(--white); line-height: 1.2; }
+    .hero-stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; margin-top: 4px; }
 
-    .btn-text-stack span {
-      display: block;
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .btn-text-stack .btn-alt {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translateY(100%);
-    }
-
-    .btn-primary:hover .btn-text-stack span,
-    .btn-secondary:hover .btn-text-stack span {
-      transform: translateY(-100%);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 36px;
-    }
-
-    .hero-stat {
-      text-align: left;
-    }
-
-    .hero-stat-number {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.2;
-    }
-
-    .hero-stat-label {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-top: 4px;
-    }
-
-    /* Phone mockup */
-    .hero-visual {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .phone-mockup-wrapper {
-      position: relative;
-      animation: float 6s ease-in-out infinite;
-    }
-
+    .hero-visual { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; }
+    .phone-mockup-wrapper { position: relative; animation: float 6s ease-in-out infinite; }
     .phone-mockup-wrapper img {
-      width: 300px;
-      height: auto;
-      border-radius: 32px;
-      box-shadow: 0 60px 120px rgba(0, 0, 0, 0.6),
-                  0 0 0 1px rgba(255, 255, 255, 0.08);
+      width: 300px; height: auto; border-radius: 32px;
+      box-shadow: 0 60px 120px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
       transform: perspective(1200px) rotateY(-6deg) rotateX(3deg);
-      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      z-index: 2;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); position: relative; z-index: 2;
     }
-
-    .phone-mockup-wrapper:hover img {
-      transform: perspective(1200px) rotateY(-1deg) rotateX(1deg);
-    }
-
+    .phone-mockup-wrapper:hover img { transform: perspective(1200px) rotateY(-1deg) rotateX(1deg); }
     .phone-glow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 350px;
-      height: 600px;
-      background: radial-gradient(ellipse, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
-      filter: blur(50px);
-      pointer-events: none;
-      z-index: 1;
-      animation: pulse-glow 5s ease-in-out infinite;
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 350px; height: 600px;
+      background: radial-gradient(ellipse, rgba(255, 106, 0, 0.12) 0%, transparent 70%);
+      filter: blur(50px); pointer-events: none; z-index: 1;
+      animation: pulse-glow-anim 5s ease-in-out infinite;
     }
-
     .phone-shadow {
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 250px;
-      height: 40px;
-      background: radial-gradient(ellipse, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
-      filter: blur(20px);
-      z-index: 0;
+      position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%);
+      width: 250px; height: 40px;
+      background: radial-gradient(ellipse, rgba(255, 106, 0, 0.15) 0%, transparent 70%);
+      filter: blur(20px); z-index: 0;
     }
 
-    /* ========== FEATURES SECTION ========== */
-    .features {
-      background: var(--primary);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .feature-card {
-      background: var(--card-bg);
-      border-radius: 20px;
-      padding: 36px 28px;
-      border: 1px solid var(--card-border);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245, 158, 11, 0.2);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .feature-card:hover::before {
-      opacity: 1;
-    }
-
-    .feature-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      flex-shrink: 0;
-    }
-
-    .feature-icon svg {
-      width: 26px;
-      height: 26px;
-    }
-
-    .feature-icon.purple {
-      background: rgba(139, 92, 246, 0.12);
-      color: #a78bfa;
-    }
-    .feature-icon.blue {
-      background: rgba(59, 130, 246, 0.12);
-      color: #60a5fa;
-    }
-    .feature-icon.green {
-      background: rgba(34, 197, 94, 0.12);
-      color: #4ade80;
-    }
-    .feature-icon.red {
-      background: rgba(239, 68, 68, 0.12);
-      color: #f87171;
-    }
-    .feature-icon.amber {
-      background: rgba(245, 158, 11, 0.12);
-      color: #fbbf24;
-    }
-    .feature-icon.teal {
-      background: rgba(20, 184, 166, 0.12);
-      color: #2dd4bf;
-    }
-
-    .feature-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 10px;
-      letter-spacing: -0.01em;
-    }
-
-    .feature-description {
-      font-size: 0.9rem;
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    /* ========== BOARDS SECTION ========== */
-    .boards {
-      background: var(--primary-light);
-    }
-
-    .boards-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .board-card {
-      background: var(--card-bg);
-      border-radius: 20px;
-      padding: 36px 24px;
-      border: 1px solid var(--card-border);
-      text-align: center;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .board-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245, 158, 11, 0.2);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .board-card-icon {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background: rgba(245, 158, 11, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      transition: var(--transition);
-    }
-
-    .board-card:hover .board-card-icon {
+    /* ========== COUNTDOWN BANNER ========== */
+    .countdown-banner {
       background: var(--accent);
-      transform: scale(1.08);
+      padding: 20px 0;
+      position: relative;
+      overflow: hidden;
     }
+    .countdown-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
+      pointer-events: none;
+    }
+    .countdown-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: center; gap: 24px;
+      flex-wrap: wrap; position: relative; z-index: 1;
+    }
+    .countdown-text {
+      font-size: 1rem; font-weight: 700; color: var(--primary);
+      text-align: center;
+    }
+    .countdown-timer { display: flex; gap: 8px; align-items: center; }
+    .countdown-block {
+      display: flex; flex-direction: column; align-items: center;
+      background: var(--primary); color: var(--white);
+      padding: 8px 12px; border-radius: 10px; min-width: 60px;
+    }
+    .countdown-number { font-size: 1.4rem; font-weight: 800; line-height: 1.2; }
+    .countdown-label { font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+    .countdown-separator { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+    .countdown-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--primary); color: var(--accent);
+      padding: 12px 24px; border-radius: 10px; font-weight: 700; font-size: 0.9rem;
+      border: none; cursor: pointer; transition: var(--transition); text-decoration: none;
+      white-space: nowrap;
+    }
+    .countdown-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 
-    .board-card:hover .board-card-icon svg {
-      color: var(--primary);
+    /* ========== FEATURES ========== */
+    .features { background: var(--primary); }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .feature-card {
+      background: var(--card-bg); border-radius: 20px; padding: 36px 28px;
+      border: 1px solid var(--card-border); transition: var(--transition);
+      position: relative; overflow: hidden;
     }
+    .feature-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0; transition: opacity 0.4s ease;
+    }
+    .feature-card:hover { transform: translateY(-6px); border-color: rgba(255, 106, 0, 0.2); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px; flex-shrink: 0;
+    }
+    .feature-icon svg { width: 26px; height: 26px; }
+    .feature-icon.purple { background: rgba(139, 92, 246, 0.12); color: #a78bfa; }
+    .feature-icon.blue { background: rgba(59, 130, 246, 0.12); color: #60a5fa; }
+    .feature-icon.green { background: rgba(34, 197, 94, 0.12); color: #4ade80; }
+    .feature-icon.white-icon { background: rgba(255, 255, 255, 0.15); color: #ffffff; }
+    .feature-icon.orange { background: rgba(255, 106, 0, 0.12); color: var(--accent); }
+    .feature-title { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; letter-spacing: -0.01em; }
+    .feature-description { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
 
-    .board-card-icon svg {
-      width: 28px;
-      height: 28px;
-      color: var(--accent);
-      transition: var(--transition);
-    }
+    .features-orange { background: var(--accent); }
+    .features-orange .section-title { color: var(--primary); }
+    .features-orange .section-subtitle { color: rgba(0,0,0,0.7); }
+    .features-orange .section-label { background: rgba(0,0,0,0.1); color: var(--primary); }
+    .features-orange .feature-card { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.2); }
+    .features-orange .feature-card:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.3); }
+    .features-orange .feature-title { color: var(--primary); }
+    .features-orange .feature-description { color: rgba(0,0,0,0.7); }
+    .features-orange .feature-card::before { background: linear-gradient(90deg, var(--primary), transparent); }
 
-    .board-card-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
+    .features-white { background: var(--white); }
+    .features-white .section-title { color: #0A0A0A; }
+    .features-white .section-subtitle { color: #666666; }
+    .features-white .section-label { background: rgba(255, 106, 0, 0.1); color: var(--accent); }
+    .features-white .feature-card { background: #f5f5f5; border-color: #e5e5e5; }
+    .features-white .feature-card:hover { background: #eeeeee; border-color: rgba(255, 106, 0, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); }
+    .features-white .feature-title { color: #0A0A0A; }
+    .features-white .feature-description { color: #666666; }
+    .features-white .feature-card::before { background: linear-gradient(90deg, var(--accent), transparent); }
 
-    .board-card-subtitle {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+    /* ========== BOARDS ========== */
+    .boards { background: var(--primary-light); }
+    .boards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .board-card {
+      background: var(--card-bg); border-radius: 20px; padding: 36px 24px;
+      border: 1px solid var(--card-border); text-align: center;
+      transition: var(--transition); position: relative; overflow: hidden;
     }
+    .board-card:hover { transform: translateY(-6px); border-color: rgba(255, 106, 0, 0.2); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+    .board-card-icon {
+      width: 68px; height: 68px; border-radius: 50%;
+      background: rgba(255, 106, 0, 0.08); display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; transition: var(--transition);
+    }
+    .board-card:hover .board-card-icon { background: var(--accent); transform: scale(1.08); }
+    .board-card:hover .board-card-icon svg { color: var(--primary); }
+    .board-card-icon svg { width: 28px; height: 28px; color: var(--accent); transition: var(--transition); }
+    .board-card-title { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .board-card-subtitle { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
 
     /* ========== HOW IT WORKS ========== */
-    .how-it-works {
-      background: var(--primary);
-      position: relative;
-      overflow: hidden;
-    }
-
+    .how-it-works { background: var(--primary); position: relative; overflow: hidden; }
     .how-it-works-glow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 600px;
-      height: 400px;
-      background: radial-gradient(ellipse, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(255, 106, 0, 0.06) 0%, transparent 70%);
       pointer-events: none;
     }
-
-    .how-it-works .section-title {
-      color: var(--white);
-    }
-
-    .how-it-works .section-subtitle {
-      color: var(--text);
-    }
-
-    .how-it-works .section-label {
-      background: rgba(245, 158, 11, 0.1);
-      color: var(--accent);
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      position: relative;
-    }
-
+    .how-it-works .section-title { color: var(--white); }
+    .how-it-works .section-subtitle { color: var(--text); }
+    .how-it-works .section-label { background: rgba(255, 106, 0, 0.1); color: var(--accent); }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
     .steps-grid::before {
-      content: '';
-      position: absolute;
-      top: 44px;
-      left: 16%;
-      right: 16%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.2), transparent);
+      content: ''; position: absolute; top: 44px; left: 16%; right: 16%; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 106, 0, 0.2), transparent);
     }
-
-    .step-card {
-      text-align: center;
-      position: relative;
-    }
-
+    .step-card { text-align: center; position: relative; }
     .step-number {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      background: rgba(245, 158, 11, 0.06);
-      border: 2px solid rgba(245, 158, 11, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 28px;
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--accent);
-      position: relative;
-      z-index: 1;
-      transition: var(--transition);
+      width: 88px; height: 88px; border-radius: 50%;
+      background: rgba(255, 106, 0, 0.06); border: 2px solid rgba(255, 106, 0, 0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px; font-size: 1.6rem; font-weight: 800; color: var(--accent);
+      position: relative; z-index: 1; transition: var(--transition);
     }
+    .step-card:hover .step-number { background: var(--accent); color: var(--primary); border-color: var(--accent); transform: scale(1.1); }
+    .step-card:hover .step-number svg { color: var(--primary); }
+    .step-number svg { width: 32px; height: 32px; color: var(--accent); transition: var(--transition); }
+    .step-title { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .step-description { font-size: 0.9rem; color: var(--text); line-height: 1.7; max-width: 280px; margin: 0 auto; }
 
-    .step-card:hover .step-number {
-      background: var(--accent);
-      color: var(--primary);
-      border-color: var(--accent);
-      transform: scale(1.1);
-    }
-
-    .step-card:hover .step-number svg {
-      color: var(--primary);
-    }
-
-    .step-number svg {
-      width: 32px;
-      height: 32px;
-      color: var(--accent);
-      transition: var(--transition);
-    }
-
-    .step-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-
-    .step-description {
-      font-size: 0.9rem;
-      color: var(--text);
-      line-height: 1.7;
-      max-width: 280px;
-      margin: 0 auto;
-    }
-
-    /* ========== VIDEOS SECTION ========== */
-    .videos {
-      background: var(--primary-light);
-      overflow: hidden;
-    }
-
-    .videos .section-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
+    /* ========== VIDEOS ========== */
+    .videos { background: var(--primary-light); overflow: hidden; }
+    .videos .section-header { text-align: center; margin-bottom: 40px; }
     .video-scroll-track {
-      display: flex;
-      gap: 24px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding: 8px 0 24px;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; padding: 8px 0 24px;
+      scrollbar-width: none; -ms-overflow-style: none;
     }
-
-    .video-scroll-track::-webkit-scrollbar {
-      display: none;
-    }
-
+    .video-scroll-track::-webkit-scrollbar { display: none; }
     .video-card {
-      flex: 0 0 360px;
-      scroll-snap-align: start;
-      background: var(--card-bg);
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid var(--card-border);
-      transition: var(--transition);
+      flex: 0 0 360px; scroll-snap-align: start; background: var(--card-bg);
+      border-radius: 20px; overflow: hidden; border: 1px solid var(--card-border); transition: var(--transition);
     }
-
-    .video-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      border-color: rgba(245, 158, 11, 0.2);
-    }
-
-    .video-card-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background: var(--primary);
-    }
-
-    .video-card-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-card-info {
-      padding: 20px;
-    }
-
+    .video-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); border-color: rgba(255, 106, 0, 0.2); }
+    .video-card-wrapper { position: relative; width: 100%; padding-top: 56.25%; background: var(--primary); }
+    .video-card-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .video-card-info { padding: 20px; }
     .video-card-label {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 10px;
+      display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
     }
+    .video-card-label.tutorial { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+    .video-card-label.promo { background: rgba(255, 106, 0, 0.15); color: var(--accent); }
+    .video-card-title { font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.4; }
+    .video-scroll-hint { text-align: center; margin-top: 16px; color: var(--text-muted); font-size: 0.85rem; }
 
-    .video-card-label.tutorial {
-      background: rgba(139, 92, 246, 0.15);
-      color: #a78bfa;
-    }
-
-    .video-card-label.promo {
-      background: rgba(245, 158, 11, 0.15);
-      color: var(--accent);
-    }
-
-    .video-card-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.4;
-    }
-
-    .video-scroll-hint {
-      text-align: center;
-      margin-top: 16px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    .video-scroll-hint svg {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 6px;
-    }
-
-    /* ========== DOWNLOAD SECTION ========== */
+    /* ========== DOWNLOAD ========== */
     .download {
-      background: linear-gradient(135deg, #0a0a0a 0%, #141414 100%);
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(135deg, var(--accent) 0%, #ff8c33 50%, var(--accent) 100%);
+      position: relative; overflow: hidden;
     }
-
     .download::before {
-      content: '';
-      position: absolute;
-      top: -200px;
-      right: -200px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
+      content: ''; position: absolute; top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;
     }
-
     .download::after {
-      content: '';
-      position: absolute;
-      bottom: -200px;
-      left: -200px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
-      border-radius: 50%;
+      content: ''; position: absolute; bottom: -200px; left: -200px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(0,0,0,0.08) 0%, transparent 70%); border-radius: 50%;
     }
-
-    .download-inner {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .download .section-title {
-      color: var(--white);
-      font-size: 3rem;
-    }
-
-    .download .section-subtitle {
-      color: var(--text);
-      font-size: 1.1rem;
-    }
-
+    .download-inner { position: relative; z-index: 1; text-align: center; max-width: 700px; margin: 0 auto; }
+    .download .section-title { color: var(--primary); font-size: 3rem; }
+    .download .section-subtitle { color: rgba(0,0,0,0.7); font-size: 1.1rem; }
+    .download .section-label { background: rgba(0,0,0,0.1); color: var(--primary); }
     .download-buttons {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 44px;
-      max-width: 580px;
-      margin-left: auto;
-      margin-right: auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+      margin-top: 44px; max-width: 580px; margin-left: auto; margin-right: auto;
     }
-
     .download-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 18px 32px;
-      border-radius: 16px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: var(--transition);
-      text-decoration: none;
-      border: none;
-      position: relative;
-      overflow: hidden;
+      display: inline-flex; align-items: center; gap: 12px; padding: 18px 32px;
+      border-radius: 16px; font-weight: 700; font-size: 1rem; cursor: pointer;
+      transition: var(--transition); text-decoration: none; border: none; position: relative; overflow: hidden;
     }
-
-    .download-btn-primary {
-      background: var(--accent);
-      color: var(--primary);
-    }
-
-    .download-btn-primary:hover {
-      background: var(--accent-hover);
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 16px 50px rgba(245, 158, 11, 0.35);
-    }
-
+    .download-btn-primary { background: var(--primary); color: var(--accent); }
+    .download-btn-primary:hover { background: #1a1a1a; transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3); }
     .download-btn-secondary {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0,0,0,0.08); color: var(--primary);
+      border: 1px solid rgba(0,0,0,0.15);
     }
+    .download-btn-secondary:hover { background: rgba(0,0,0,0.15); border-color: rgba(0,0,0,0.25); transform: translateY(-3px); }
+    .download-note { color: rgba(0,0,0,0.6); font-size: 0.82rem; margin-top: 24px; }
 
-    .download-btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-3px);
-    }
-
-    .download-note {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      margin-top: 24px;
-    }
-
-    /* ========== FAQ SECTION ========== */
-    .faq {
-      background: var(--primary);
-    }
-
-    .faq-list {
-      max-width: 720px;
-      margin: 56px auto 0;
-    }
-
+    /* ========== FAQ ========== */
+    .faq { background: var(--primary); }
+    .faq-list { max-width: 720px; margin: 56px auto 0; }
     .faq-item {
-      background: var(--card-bg);
-      border-radius: 16px;
-      border: 1px solid var(--card-border);
-      margin-bottom: 12px;
-      overflow: hidden;
-      transition: var(--transition);
+      background: var(--card-bg); border-radius: 16px; border: 1px solid var(--card-border);
+      margin-bottom: 12px; overflow: hidden; transition: var(--transition);
     }
-
-    .faq-item:hover {
-      border-color: rgba(245, 158, 11, 0.15);
-    }
-
-    .faq-item.active {
-      border-color: rgba(245, 158, 11, 0.25);
-      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.06);
-    }
-
+    .faq-item:hover { border-color: rgba(255, 106, 0, 0.15); }
+    .faq-item.active { border-color: rgba(255, 106, 0, 0.25); box-shadow: 0 8px 24px rgba(255, 106, 0, 0.06); }
     .faq-question {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 22px 24px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      width: 100%;
-      text-align: left;
-      font-family: var(--font-stack);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--white);
-      gap: 16px;
-      transition: var(--transition);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 24px; cursor: pointer; background: none; border: none; width: 100%;
+      text-align: left; font-family: var(--font-stack); font-size: 1rem; font-weight: 600;
+      color: var(--white); gap: 16px; transition: var(--transition);
     }
-
-    .faq-question:hover {
-      color: var(--accent);
-    }
-
-    .faq-item.active .faq-question {
-      color: var(--accent);
-    }
-
+    .faq-question:hover { color: var(--accent); }
+    .faq-item.active .faq-question { color: var(--accent); }
     .faq-chevron {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-      color: var(--text-muted);
+      width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s ease; color: var(--text-muted);
     }
-
-    .faq-item.active .faq-chevron {
-      transform: rotate(180deg);
-      color: var(--accent);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
-    }
-
-    .faq-answer-inner {
-      padding: 0 24px 22px;
-      font-size: 0.92rem;
-      color: var(--text);
-      line-height: 1.8;
-    }
+    .faq-item.active .faq-chevron { transform: rotate(180deg); color: var(--accent); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+    .faq-answer-inner { padding: 0 24px 22px; font-size: 0.92rem; color: var(--text); line-height: 1.8; }
 
     /* ========== FOOTER ========== */
     .footer {
-      background: var(--primary);
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-      padding: 60px 0 24px;
-      position: relative;
-      overflow: hidden;
+      background: var(--primary); border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 60px 0 24px; position: relative; overflow: hidden;
     }
-
     .footer-massive-text {
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: clamp(80px, 12vw, 160px);
-      font-weight: 900;
-      color: rgba(255, 255, 255, 0.02);
-      white-space: nowrap;
-      pointer-events: none;
-      letter-spacing: -0.04em;
-      user-select: none;
+      position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);
+      font-size: clamp(80px, 12vw, 160px); font-weight: 900;
+      color: rgba(255, 255, 255, 0.02); white-space: nowrap; pointer-events: none;
+      letter-spacing: -0.04em; user-select: none;
     }
-
     .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 1;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: 24px; margin-bottom: 40px; position: relative; z-index: 1;
     }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .footer-brand-icon {
-      width: 32px;
-      height: 32px;
-      background: var(--accent);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer-brand-icon-img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-
-    .footer-tagline {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 12px;
-    }
-
+    .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--white); font-weight: 700; font-size: 1.1rem; }
+    .footer-brand-icon-img { width: 32px; height: 32px; object-fit: contain; border-radius: 8px; flex-shrink: 0; }
+    .footer-tagline { color: var(--text-muted); font-size: 0.85rem; }
+    .footer-social { display: flex; gap: 12px; }
     .footer-social a {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      transition: var(--transition);
+      width: 42px; height: 42px; border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); transition: var(--transition);
     }
-
-    .footer-social a:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: var(--primary);
-      transform: translateY(-3px);
-    }
-
-    .footer-social svg {
-      width: 18px;
-      height: 18px;
-    }
-
+    .footer-social a:hover { background: var(--accent); border-color: var(--accent); color: var(--primary); transform: translateY(-3px); }
+    .footer-social svg { width: 18px; height: 18px; }
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-      padding-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      position: relative;
-      z-index: 1;
+      border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 24px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: 12px; position: relative; z-index: 1;
     }
+    .footer-copyright { color: var(--text-muted); font-size: 0.82rem; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--text-muted); font-size: 0.82rem; transition: var(--transition); }
+    .footer-links a:hover { color: var(--accent); }
 
-    .footer-copyright {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      transition: var(--transition);
-    }
-
-    .footer-links a:hover {
-      color: var(--accent);
-    }
-
-    /* ========== FLOATING DOWNLOAD BUTTON (MOBILE) ========== */
+    /* ========== FLOATING DOWNLOAD ========== */
     .floating-download {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 998;
-      padding: 12px 16px;
-      padding-bottom: max(12px, env(safe-area-inset-bottom));
-      background: linear-gradient(to top, rgba(10, 10, 10, 0.98) 60%, transparent);
-      pointer-events: none;
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+      padding: 12px 16px; padding-bottom: max(12px, env(safe-area-inset-bottom));
+      background: linear-gradient(to top, rgba(10, 10, 10, 0.98) 60%, transparent); pointer-events: none;
     }
-
     .floating-download-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      padding: 16px;
-      background: var(--accent);
-      color: var(--primary);
-      font-size: 1rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 14px;
-      cursor: pointer;
-      text-decoration: none;
-      pointer-events: all;
-      transition: var(--transition);
-      box-shadow: 0 -4px 20px rgba(245, 158, 11, 0.3);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 16px; background: var(--accent); color: var(--primary);
+      font-size: 1rem; font-weight: 700; border: none; border-radius: 14px; cursor: pointer;
+      text-decoration: none; pointer-events: all; transition: var(--transition);
+      box-shadow: 0 -4px 20px rgba(255, 106, 0, 0.3);
     }
-
-    .floating-download-btn:hover {
-      background: var(--accent-hover);
-    }
+    .floating-download-btn:hover { background: var(--accent-hover); }
 
     /* ========== RESPONSIVE ========== */
     @media (max-width: 1024px) {
-      .hero-title {
-        font-size: 3.5rem;
-      }
-
-      .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .boards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .hero-title { font-size: 3.5rem; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .boards-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
     @media (max-width: 768px) {
-      .section {
-        padding: 72px 0;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .navbar-links {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-top: 100px;
-        padding-bottom: 72px;
-      }
-
-      .hero-inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 48px;
-      }
-
-      .hero-title {
-        font-size: 2.6rem;
-      }
-
-      .hero-description {
-        margin: 0 auto 36px;
-        font-size: 1rem;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .hero-stats {
-        justify-content: center;
-      }
-
-      .phone-mockup-wrapper img {
-        width: 240px;
-        transform: none;
-      }
-
-      .phone-mockup-wrapper:hover img {
-        transform: none;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .boards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .board-card {
-        padding: 28px 16px;
-      }
-
-      .board-card-icon {
-        width: 56px;
-        height: 56px;
-      }
-
-      .steps-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .steps-grid::before {
-        display: none;
-      }
-
-      .video-card {
-        flex: 0 0 300px;
-      }
-
-      .download .section-title {
-        font-size: 2.2rem;
-      }
-
-      .download-buttons {
-        grid-template-columns: 1fr;
-        padding: 0 16px;
-        max-width: 380px;
-      }
-
-      .download-btn {
-        justify-content: center;
-      }
-
-      .floating-download {
-        display: block;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      /* Add bottom padding to account for floating button */
-      .faq,
-      .footer {
-        padding-bottom: 100px;
-      }
+      .section { padding: 72px 0; }
+      .section-title { font-size: 2rem; }
+      .navbar-links { display: none; }
+      .menu-toggle { display: block; }
+      .hero { min-height: auto; padding-top: 100px; padding-bottom: 72px; }
+      .hero-inner { flex-direction: column; text-align: center; gap: 48px; }
+      .hero-title { font-size: 2.6rem; }
+      .hero-description { margin: 0 auto 36px; font-size: 1rem; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .phone-mockup-wrapper img { width: 240px; transform: none; }
+      .phone-mockup-wrapper:hover img { transform: none; }
+      .features-grid { grid-template-columns: 1fr; }
+      .boards-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .board-card { padding: 28px 16px; }
+      .board-card-icon { width: 56px; height: 56px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 48px; }
+      .steps-grid::before { display: none; }
+      .video-card { flex: 0 0 300px; }
+      .download .section-title { font-size: 2.2rem; }
+      .download-buttons { grid-template-columns: 1fr; padding: 0 16px; max-width: 380px; }
+      .download-btn { justify-content: center; }
+      .floating-download { display: block; }
+      .countdown-text { font-size: 0.85rem; }
+      .countdown-block { min-width: 50px; padding: 6px 8px; }
+      .countdown-number { font-size: 1.1rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .faq, .footer { padding-bottom: 100px; }
     }
-
     @media (max-width: 400px) {
-      .hero-title {
-        font-size: 2.1rem;
-      }
-
-      .hero-stat-number {
-        font-size: 1.4rem;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        padding: 14px 24px;
-        font-size: 0.92rem;
-      }
+      .hero-title { font-size: 2.1rem; }
+      .hero-stat-number { font-size: 1.4rem; }
+      .btn-primary, .btn-secondary { padding: 14px 24px; font-size: 0.92rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="#" class="navbar-brand">
         <img src="./images/icon.png" alt="Learn Smart Logo" class="brand-icon-img">
         Learn Smart
       </a>
-
       <ul class="navbar-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#boards">Boards</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#videos">Videos</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#download" class="navbar-cta">Download App</a></li>
       </ul>
-
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
         <svg id="menuIconOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
         <svg id="menuIconClose" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
     </div>
   </nav>
-
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#features" class="mobile-nav-link">Features</a>
     <a href="#boards" class="mobile-nav-link">Boards</a>
     <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+    <a href="#videos" class="mobile-nav-link">Videos</a>
     <a href="#faq" class="mobile-nav-link">FAQ</a>
     <a href="#download" class="mobile-cta mobile-nav-link">Download App</a>
   </div>
 
-  <!-- ========== HERO SECTION ========== -->
+  <!-- HERO -->
   <section class="hero" id="hero">
-    <!-- Background particles -->
     <div class="hero-particles">
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
     </div>
-
-    <!-- Background lines -->
     <div class="hero-lines">
-      <div class="hero-line"></div>
-      <div class="hero-line"></div>
-      <div class="hero-line"></div>
-      <div class="hero-line"></div>
-      <div class="hero-line"></div>
+      <div class="hero-line"></div><div class="hero-line"></div><div class="hero-line"></div><div class="hero-line"></div><div class="hero-line"></div>
     </div>
-
-    <!-- Glow orbs -->
     <div class="hero-glow"></div>
     <div class="hero-glow-green"></div>
-
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
@@ -1695,45 +707,43 @@ e<!DOCTYPE html>
             <span class="hero-badge-dot"></span>
             Now Available on All Platforms
           </div>
-
           <h1 class="hero-title fade-up fade-up-delay-1">
-            <span class="hero-letter" style="animation-delay: 0.1s">L</span><span class="hero-letter" style="animation-delay: 0.15s">E</span><span class="hero-letter" style="animation-delay: 0.2s">A</span><span class="hero-letter" style="animation-delay: 0.25s">R</span><span class="hero-letter" style="animation-delay: 0.3s">N</span>
+            <span class="hero-letter" style="animation-delay:0.1s">T</span><span class="hero-letter" style="animation-delay:0.15s">h</span><span class="hero-letter" style="animation-delay:0.2s">e</span>
+            <span style="display:inline-block;width:16px"></span>
+            <span class="hero-letter" style="animation-delay:0.35s">I</span><span class="hero-letter" style="animation-delay:0.4s">n</span><span class="hero-letter" style="animation-delay:0.45s">i</span><span class="hero-letter" style="animation-delay:0.5s">t</span><span class="hero-letter" style="animation-delay:0.55s">i</span><span class="hero-letter" style="animation-delay:0.6s">a</span><span class="hero-letter" style="animation-delay:0.65s">t</span><span class="hero-letter" style="animation-delay:0.7s">o</span><span class="hero-letter" style="animation-delay:0.75s">r</span><span class="hero-letter" style="animation-delay:0.8s">s</span>
           </h1>
-          <div class="hero-title fade-up fade-up-delay-1">
-            <span class="hero-letter accent" style="animation-delay: 0.5s">S</span><span class="hero-letter accent" style="animation-delay: 0.55s">M</span><span class="hero-letter accent" style="animation-delay: 0.6s">A</span><span class="hero-letter accent" style="animation-delay: 0.65s">R</span><span class="hero-letter accent" style="animation-delay: 0.7s">T</span>
+          <div class="hero-title fade-up fade-up-delay-2">
+            <span class="hero-letter accent" style="animation-delay:1.0s">W</span><span class="hero-letter accent" style="animation-delay:1.05s">h</span><span class="hero-letter accent" style="animation-delay:1.1s">e</span><span class="hero-letter accent" style="animation-delay:1.15s">r</span><span class="hero-letter accent" style="animation-delay:1.2s">e</span>
+            <span style="display:inline-block;width:16px"></span>
+            <span class="hero-letter accent" style="animation-delay:1.35s">A</span><span class="hero-letter accent" style="animation-delay:1.4s">m</span><span class="hero-letter accent" style="animation-delay:1.45s">b</span><span class="hero-letter accent" style="animation-delay:1.5s">i</span><span class="hero-letter accent" style="animation-delay:1.55s">t</span><span class="hero-letter accent" style="animation-delay:1.6s">i</span><span class="hero-letter accent" style="animation-delay:1.65s">o</span><span class="hero-letter accent" style="animation-delay:1.7s">n</span>
+          </div>
+          <div class="hero-title fade-up fade-up-delay-3" style="margin-top:-4px">
+            <span class="hero-letter accent" style="animation-delay:1.9s">M</span><span class="hero-letter accent" style="animation-delay:1.95s">e</span><span class="hero-letter accent" style="animation-delay:2.0s">e</span><span class="hero-letter accent" style="animation-delay:2.05s">t</span><span class="hero-letter accent" style="animation-delay:2.1s">s</span>
+            <span style="display:inline-block;width:16px"></span>
+            <span class="hero-letter accent" style="animation-delay:2.25s">E</span><span class="hero-letter accent" style="animation-delay:2.3s">x</span><span class="hero-letter accent" style="animation-delay:2.35s">c</span><span class="hero-letter accent" style="animation-delay:2.4s">e</span><span class="hero-letter accent" style="animation-delay:2.45s">l</span><span class="hero-letter accent" style="animation-delay:2.5s">l</span><span class="hero-letter accent" style="animation-delay:2.55s">e</span><span class="hero-letter accent" style="animation-delay:2.6s">n</span><span class="hero-letter accent" style="animation-delay:2.65s">c</span>            <span class="hero-letter accent" style="animation-delay:2.7s">e</span>
           </div>
 
-          <p class="hero-description fade-up fade-up-delay-2">
-            Pakistan's most trusted learning app for Class 9 &amp; 10 students. 
-            Video lectures, interactive quizzes, and detailed notes — all in one place. 
-            Built for Karachi Board, Aga Khan, O-Level &amp; IGCSE.
+          <p class="hero-description fade-up fade-up-delay-4">
+            Pakistan's most trusted learning app for Class 9 &amp; 10 students.
+            Video lectures, interactive quizzes, and detailed notes — all in one place.
           </p>
 
-          <div class="hero-actions fade-up fade-up-delay-3">
+          <div class="hero-actions fade-up fade-up-delay-5">
             <a href="#download" class="btn-primary">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
-              <div class="btn-text-stack">
-                <span>Download Free</span>
-                <span class="btn-alt">Start Now</span>
-              </div>
+              <span>Download Free</span>
             </a>
-            <a href="#how-it-works" class="btn-secondary">
+            <a href="#videos" class="btn-secondary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polygon points="10 8 16 12 10 16 10 8"/>
+                <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
               </svg>
-              <div class="btn-text-stack">
-                <span>How It Works</span>
-                <span class="btn-alt">Watch Demo</span>
-              </div>
+              <span>Watch Demo</span>
             </a>
           </div>
 
-          <div class="hero-stats fade-up fade-up-delay-4">
+          <div class="hero-stats fade-up fade-up-delay-5">
             <div class="hero-stat">
               <div class="hero-stat-number">10K+</div>
               <div class="hero-stat-label">Students</div>
@@ -1749,7 +759,7 @@ e<!DOCTYPE html>
           </div>
         </div>
 
-        <div class="hero-visual fade-up fade-up-delay-2">
+        <div class="hero-visual fade-up fade-up-delay-3">
           <div class="phone-mockup-wrapper">
             <div class="phone-glow"></div>
             <img src="./images/phone-mockup.png" alt="Learn Smart App Screenshot" width="300" height="560">
@@ -1760,117 +770,174 @@ e<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- ========== FEATURES SECTION ========== -->
+  <!-- COUNTDOWN BANNER -->
+  <section class="countdown-banner" id="countdownBanner">
+    <div class="countdown-inner">
+      <p class="countdown-text">&#128293; Only a Few Seats Left! New Batch Starts Soon — Reserve Yours Now</p>
+      <div class="countdown-timer" id="countdownTimer">
+        <div class="countdown-block">
+          <span class="countdown-number" id="cd-days">07</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <span class="countdown-separator">:</span>
+        <div class="countdown-block">
+          <span class="countdown-number" id="cd-hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <span class="countdown-separator">:</span>
+        <div class="countdown-block">
+          <span class="countdown-number" id="cd-minutes">00</span>
+          <span class="countdown-label">Min</span>
+        </div>
+        <span class="countdown-separator">:</span>
+        <div class="countdown-block">
+          <span class="countdown-number" id="cd-seconds">00</span>
+          <span class="countdown-label">Sec</span>
+        </div>
+      </div>
+      <a href="#download" class="countdown-btn">Book Your Free Demo Class</a>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 1 — DARK -->
   <section class="features section" id="features">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
+      <div class="section-header" style="text-align:center;">
         <span class="section-label fade-up">Features</span>
         <h2 class="section-title fade-up fade-up-delay-1">Everything You Need to<br>Excel in Exams</h2>
-        <p class="section-subtitle fade-up fade-up-delay-2" style="margin: 0 auto;">A complete learning toolkit designed specifically for Pakistani students in Classes 9 and 10.</p>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">A complete learning toolkit designed specifically for Pakistani students.</p>
       </div>
-
       <div class="features-grid">
-        <!-- Feature 1: Video Lectures -->
         <div class="feature-card fade-up fade-up-delay-1">
           <div class="feature-icon purple">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="23 7 16 12 23 17 23 7"/>
-              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+              <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
             </svg>
           </div>
           <h3 class="feature-title">Video Lectures</h3>
           <p class="feature-description">High-quality video lessons by expert teachers. Watch anytime, rewind, and learn at your own pace.</p>
         </div>
-
-        <!-- Feature 2: Interactive Quizzes -->
         <div class="feature-card fade-up fade-up-delay-2">
           <div class="feature-icon blue">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 11l3 3L22 4"/>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
             </svg>
           </div>
           <h3 class="feature-title">Interactive Quizzes</h3>
           <p class="feature-description">Test your knowledge with chapter-wise quizzes. Instant feedback and detailed explanations for every question.</p>
         </div>
-
-        <!-- Feature 3: Detailed Notes -->
         <div class="feature-card fade-up fade-up-delay-3">
           <div class="feature-icon green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
+              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
             </svg>
           </div>
           <h3 class="feature-title">Detailed Notes</h3>
           <p class="feature-description">Comprehensive, exam-focused notes for every chapter. Concise summaries to help you revise quickly.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Feature 4: Secure Content -->
-        <div class="feature-card fade-up fade-up-delay-4">
-          <div class="feature-icon red">
+  <!-- FEATURE SECTION 2 — ORANGE -->
+  <section class="features features-orange section">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <span class="section-label fade-up">Progress</span>
+        <h2 class="section-title fade-up fade-up-delay-1">Practice &amp; Progress</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">Track your growth, compete with peers, and stay ahead with smart tools.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up fade-up-delay-1">
+          <div class="feature-icon white-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <polyline points="9 12 11 14 15 10"/>
+              <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
             </svg>
           </div>
-          <h3 class="feature-title">Secure Content</h3>
-          <p class="feature-description">All content is protected and encrypted. Your learning materials stay safe and exclusive to verified students.</p>
+          <h3 class="feature-title">Smart Quizzes</h3>
+          <p class="feature-description">AI-powered quizzes that adapt to your level. Focus on weak areas and improve faster.</p>
         </div>
-
-        <!-- Feature 5: Easy Payment -->
-        <div class="feature-card fade-up fade-up-delay-5">
-          <div class="feature-icon amber">
+        <div class="feature-card fade-up fade-up-delay-2">
+          <div class="feature-icon white-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-              <line x1="1" y1="10" x2="23" y2="10"/>
+              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
             </svg>
           </div>
-          <h3 class="feature-title">Easy Payment</h3>
-          <p class="feature-description">Simple and affordable pricing. Pay via bank transfer, JazzCash, EasyPaisa, or other local methods.</p>
+          <h3 class="feature-title">Progress Tracking</h3>
+          <p class="feature-description">Visual dashboards show your scores, streaks, and improvement over time. Stay motivated.</p>
         </div>
-
-        <!-- Feature 6: Leaderboard & Badges -->
-        <div class="feature-card fade-up fade-up-delay-5">
-          <div class="feature-icon teal">
+        <div class="feature-card fade-up fade-up-delay-3">
+          <div class="feature-icon white-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 9l6 6 6-6"/>
-              <path d="M12 3l-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287L12 3z"/>
+              <path d="M6 9l6 6 6-6"/><path d="M12 3l-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287L12 3z"/>
             </svg>
           </div>
-          <h3 class="feature-title">Leaderboard &amp; Badges</h3>
-          <p class="feature-description">Compete with classmates, earn badges for achievements, and track your progress on the leaderboard.</p>
+          <h3 class="feature-title">Leaderboard</h3>
+          <p class="feature-description">Compete with classmates and students across Pakistan. Earn badges and climb the ranks.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== BOARDS WE COVER ========== -->
+  <!-- FEATURE SECTION 3 — WHITE -->
+  <section class="features features-white section">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <span class="section-label fade-up">Support</span>
+        <h2 class="section-title fade-up fade-up-delay-1">Community &amp; Support</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">We keep your content safe, payments easy, and help always available.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up fade-up-delay-1">
+          <div class="feature-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Secure Content</h3>
+          <p class="feature-description">All content is protected and encrypted. Your learning materials stay safe and exclusive.</p>
+        </div>
+        <div class="feature-card fade-up fade-up-delay-2">
+          <div class="feature-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Easy Payment</h3>
+          <p class="feature-description">Pay via JazzCash, EasyPaisa, bank transfer, or cash. Simple and affordable pricing.</p>
+        </div>
+        <div class="feature-card fade-up fade-up-delay-3">
+          <div class="feature-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI Chatbot</h3>
+          <p class="feature-description">Got questions? Our AI-powered chatbot is available 24/7 to help you with any doubt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARDS -->
   <section class="boards section" id="boards">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
+      <div class="section-header" style="text-align:center;">
         <span class="section-label fade-up">Boards</span>
         <h2 class="section-title fade-up fade-up-delay-1">Boards We Cover</h2>
-        <p class="section-subtitle fade-up fade-up-delay-2" style="margin: 0 auto;">Tailored content for Pakistan's most popular education boards. Find your board and start learning.</p>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">Tailored content for Pakistan's most popular education boards.</p>
       </div>
-
       <div class="boards-grid">
-        <!-- Karachi Board -->
         <div class="board-card fade-up fade-up-delay-1">
           <div class="board-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
             </svg>
           </div>
           <h3 class="board-card-title">Karachi Board</h3>
           <p class="board-card-subtitle">BSEK — Complete Matric syllabus for Class 9 &amp; 10</p>
         </div>
-
-        <!-- Aga Khan Board -->
         <div class="board-card fade-up fade-up-delay-2">
           <div class="board-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1880,25 +947,19 @@ e<!DOCTYPE html>
           <h3 class="board-card-title">Aga Khan Board</h3>
           <p class="board-card-subtitle">AKU-EB — Comprehensive exam preparation material</p>
         </div>
-
-        <!-- O-Level -->
         <div class="board-card fade-up fade-up-delay-3">
           <div class="board-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="7"/>
-              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
             </svg>
           </div>
           <h3 class="board-card-title">O-Level</h3>
           <p class="board-card-subtitle">Cambridge O-Level — International standard curriculum</p>
         </div>
-
-        <!-- IGCSE -->
         <div class="board-card fade-up fade-up-delay-4">
           <div class="board-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/>
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/>
             </svg>
           </div>
           <h3 class="board-card-title">IGCSE</h3>
@@ -1908,103 +969,86 @@ e<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- ========== HOW IT WORKS ========== -->
+  <!-- HOW IT WORKS -->
   <section class="how-it-works section" id="how-it-works">
+    <div class="how-it-works-glow"></div>
     <div class="container">
-      <div class="section-header" style="text-align: center;">
+      <div class="section-header" style="text-align:center;">
         <span class="section-label fade-up">Getting Started</span>
         <h2 class="section-title fade-up fade-up-delay-1">How It Works</h2>
-        <p class="section-subtitle fade-up fade-up-delay-2" style="margin: 0 auto;">Get started in just 3 simple steps. No complicated setup, no confusion.</p>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">Get started in just 3 simple steps.</p>
       </div>
-
       <div class="steps-grid">
-        <!-- Step 1 -->
         <div class="step-card fade-up fade-up-delay-1">
           <div class="step-number">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
           <h3 class="step-title">Register</h3>
-          <p class="step-description">Create your account in seconds. Just enter your name, phone number, and select your board.</p>
+          <p class="step-description">Create your account in seconds. Enter your name, phone number, and select your board.</p>
         </div>
-
-        <!-- Step 2 -->
         <div class="step-card fade-up fade-up-delay-2">
           <div class="step-number">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-              <line x1="1" y1="10" x2="23" y2="10"/>
-              <path d="M17 16l2 2 4-4"/>
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/><path d="M17 16l2 2 4-4"/>
             </svg>
           </div>
           <h3 class="step-title">Upload Payment</h3>
-          <p class="step-description">Pay the affordable fee via JazzCash, EasyPaisa, or bank transfer. Upload your receipt in the app.</p>
+          <p class="step-description">Pay via JazzCash, EasyPaisa, or bank transfer. Upload your receipt in the app.</p>
         </div>
-
-        <!-- Step 3 -->
         <div class="step-card fade-up fade-up-delay-3">
           <div class="step-number">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
             </svg>
           </div>
           <h3 class="step-title">Start Learning</h3>
-          <p class="step-description">Access all video lectures, notes, and quizzes instantly. Your learning journey begins right away!</p>
+          <p class="step-description">Access all video lectures, notes, and quizzes instantly. Your journey begins now!</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== VIDEOS SECTION ========== -->
+  <!-- VIDEOS -->
   <section class="videos section" id="videos">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
+      <div class="section-header" style="text-align:center;">
         <span class="section-label fade-up">Videos</span>
         <h2 class="section-title fade-up fade-up-delay-1">See Learn Smart in Action</h2>
-        <p class="section-subtitle fade-up fade-up-delay-2" style="margin: 0 auto;">Watch tutorials to get started and see what other students are saying about us.</p>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">Watch tutorials and see what students are saying.</p>
       </div>
-
       <div class="video-scroll-track fade-up fade-up-delay-3">
-        <!-- Tutorial Video 1 -->
         <div class="video-card">
           <div class="video-card-wrapper">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Tutorial: Getting Started with Learn Smart" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Tutorial: Getting Started" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
           <div class="video-card-info">
             <span class="video-card-label tutorial">Tutorial</span>
             <p class="video-card-title">Getting Started with Learn Smart</p>
           </div>
         </div>
-
-        <!-- Tutorial Video 2 -->
         <div class="video-card">
           <div class="video-card-wrapper">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Tutorial: How to Navigate Your Courses" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Tutorial: Navigate Courses" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
           <div class="video-card-info">
             <span class="video-card-label tutorial">Tutorial</span>
             <p class="video-card-title">How to Navigate Your Courses</p>
           </div>
         </div>
-
-        <!-- Promotional Video 1 -->
         <div class="video-card">
           <div class="video-card-wrapper">
-            <iframe src="https://www.youtube.com/embed/Om2Y7CSGgnM" title="Learn Smart — Built for Pakistani Students" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/Om2Y7CSGgnM" title="Built for Students" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
           <div class="video-card-info">
             <span class="video-card-label promo">Promo</span>
             <p class="video-card-title">Built for Pakistani Students</p>
           </div>
         </div>
-
-        <!-- Promotional Video 2 -->
         <div class="video-card">
           <div class="video-card-wrapper">
-            <iframe src="https://www.youtube.com/embed/gHzHlKkZGng" title="Learn Smart — Student Success Stories" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/gHzHlKkZGng" title="Success Stories" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
           <div class="video-card-info">
             <span class="video-card-label promo">Promo</span>
@@ -2012,7 +1056,6 @@ e<!DOCTYPE html>
           </div>
         </div>
       </div>
-
       <p class="video-scroll-hint fade-up fade-up-delay-4">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         Swipe to see more videos
@@ -2020,165 +1063,100 @@ e<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- ========== DOWNLOAD SECTION ========== -->
+  <!-- DOWNLOAD CTA -->
   <section class="download section" id="download">
     <div class="container">
       <div class="download-inner">
         <span class="section-label fade-up">Download Now</span>
-        <h2 class="section-title fade-up fade-up-delay-1" style="margin-top: 16px;">
-          Ready to Start Learning?
-        </h2>
-        <p class="section-subtitle fade-up fade-up-delay-2">
-          Download the Learn Smart app today and join thousands of Pakistani students who are already scoring higher in their exams.
-        </p>
-
+        <h2 class="section-title fade-up fade-up-delay-1" style="margin-top:16px;">Ready to Start Learning?</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2">Download the Learn Smart app today and join thousands of students already scoring higher.</p>
         <div class="download-buttons fade-up fade-up-delay-3">
-          <!-- APK Download -->
           <a href="https://the-initiators-pro.vercel.app/downloads/app-release.apk" class="download-btn download-btn-primary" download>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
             Download APK
           </a>
-
-          <!-- Google Play -->
-          <a href="PLAYSTORE_URL_PLACEHOLDER" class="download-btn download-btn-secondary" target="_blank" rel="noopener noreferrer">
+          <a href="#" class="download-btn download-btn-secondary" target="_blank" rel="noopener noreferrer">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
             </svg>
             Get it on Google Play
           </a>
-
-          <!-- App Store (iOS) -->
-          <a href="https://the-initiators-pro.vercel.app/" class="download-btn download-btn-secondary" target="_blank" rel="noopener noreferrer">
+          <a href="#" class="download-btn download-btn-secondary" target="_blank" rel="noopener noreferrer">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
             Download for iOS
           </a>
-
-          <!-- Windows -->
-          <a href="https://the-initiators-pro.vercel.app/" class="download-btn download-btn-secondary" target="_blank" rel="noopener noreferrer">
+          <a href="#" class="download-btn download-btn-secondary" target="_blank" rel="noopener noreferrer">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3 12V6.75l6-1.32v6.48L3 12zm17-9v8.75l-10 .08V5.21L20 3zm-10 9.32l10 .1V21l-10-1.76v-6.92zm-1-.08V19.3l-6-1.01V12.2l6 .04z"/>
             </svg>
             Download for Windows
           </a>
         </div>
-
-        <p class="download-note fade-up fade-up-delay-4">
-          &#10003; Free to download &nbsp;&bull;&nbsp; &#10003; No hidden charges &nbsp;&bull;&nbsp; &#10003; Safe &amp; secure
-        </p>
+        <p class="download-note fade-up fade-up-delay-4">&#10003; Free to download &nbsp;&bull;&nbsp; &#10003; No hidden charges &nbsp;&bull;&nbsp; &#10003; Safe &amp; secure</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== FAQ SECTION ========== -->
+  <!-- FAQ -->
   <section class="faq section" id="faq">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
+      <div class="section-header" style="text-align:center;">
         <span class="section-label fade-up">FAQ</span>
         <h2 class="section-title fade-up fade-up-delay-1">Frequently Asked Questions</h2>
-        <p class="section-subtitle fade-up fade-up-delay-2" style="margin: 0 auto;">Got questions? We've got answers. Here are the most common things students and parents ask.</p>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin:0 auto;">Got questions? We've got answers.</p>
       </div>
-
       <div class="faq-list">
-        <!-- FAQ 1 -->
         <div class="faq-item fade-up fade-up-delay-1">
           <button class="faq-question" aria-expanded="false">
             Which boards does Learn Smart cover?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Learn Smart covers <strong>Karachi Board (BSEK)</strong>, <strong>Aga Khan University Examination Board (AKU-EB)</strong>, <strong>Cambridge O-Level</strong>, and <strong>IGCSE</strong>. We provide board-specific content so you only study what's relevant to your exams.
-            </div>
-          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">Learn Smart covers <strong>Karachi Board (BSEK)</strong>, <strong>Aga Khan University Examination Board (AKU-EB)</strong>, <strong>Cambridge O-Level</strong>, and <strong>IGCSE</strong>. We provide board-specific content so you only study what's relevant to your exams.</div></div>
         </div>
-
-        <!-- FAQ 2 -->
         <div class="faq-item fade-up fade-up-delay-2">
           <button class="faq-question" aria-expanded="false">
             How much does the app cost?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Learn Smart is very affordable. The app is free to download, and we charge a small monthly or yearly fee to access all premium content including video lectures, notes, and quizzes. Contact us for the latest pricing details.
-            </div>
-          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">Learn Smart is very affordable. The app is free to download, and we charge a small monthly or yearly fee to access all premium content including video lectures, notes, and quizzes. Contact us for the latest pricing details.</div></div>
         </div>
-
-        <!-- FAQ 3 -->
         <div class="faq-item fade-up fade-up-delay-3">
           <button class="faq-question" aria-expanded="false">
             How do I pay for the subscription?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              We accept multiple payment methods: <strong>JazzCash</strong>, <strong>EasyPaisa</strong>, <strong>bank transfer</strong>, and cash payment at our center. Simply make the payment, upload the receipt in the app, and your account will be activated within 24 hours.
-            </div>
-          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">We accept multiple payment methods: <strong>JazzCash</strong>, <strong>EasyPaisa</strong>, <strong>bank transfer</strong>, and cash payment at our center. Simply make the payment, upload the receipt in the app, and your account will be activated within 24 hours.</div></div>
         </div>
-
-        <!-- FAQ 4 -->
         <div class="faq-item fade-up fade-up-delay-4">
           <button class="faq-question" aria-expanded="false">
             Can I use the app offline?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Video lectures require an internet connection to stream. However, notes and quiz features may work offline once loaded. We recommend using Wi-Fi for the best experience when watching video lectures.
-            </div>
-          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">Video lectures require an internet connection to stream. However, notes and quiz features may work offline once loaded. We recommend using Wi-Fi for the best experience when watching video lectures.</div></div>
         </div>
-
-        <!-- FAQ 5 -->
         <div class="faq-item fade-up fade-up-delay-5">
           <button class="faq-question" aria-expanded="false">
             Is the app safe for my child to use?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Absolutely. Learn Smart is designed specifically for education. We use <strong>secure content protection</strong> to prevent unauthorized sharing. There are no ads, no social media distractions, and no inappropriate content. It's a safe, focused learning environment for students.
-            </div>
-          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Learn Smart is designed specifically for education. We use <strong>secure content protection</strong> to prevent unauthorized sharing. There are no ads, no social media distractions, and no inappropriate content. It's a safe, focused learning environment for students.</div></div>
         </div>
-
-        <!-- FAQ 6 -->
         <div class="faq-item fade-up fade-up-delay-5">
           <button class="faq-question" aria-expanded="false">
             What subjects are available?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              We cover three major subjects for Class 9 and 10 including <strong>Mathematics</strong>, <strong>Physics</strong>, <strong>Chemistry</strong>. More subjects are added regularly based on student demand.
-            </div>
-          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">We cover three major subjects for Class 9 and 10 including <strong>Mathematics</strong>, <strong>Physics</strong>, <strong>Chemistry</strong>. More subjects are added regularly based on student demand.</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-massive-text">LEARN SMART</div>
     <div class="container">
@@ -2190,29 +1168,22 @@ e<!DOCTYPE html>
           </div>
           <p class="footer-tagline">by The Initiators — Empowering students.</p>
         </div>
-
         <div class="footer-social">
-          <!-- Instagram -->
           <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
           </a>
-          <!-- Facebook -->
           <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
             </svg>
           </a>
-          <!-- WhatsApp -->
           <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
             </svg>
           </a>
-          <!-- YouTube -->
           <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
@@ -2221,7 +1192,6 @@ e<!DOCTYPE html>
           </a>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026-2027 The Initiators. All rights reserved.</p>
         <div class="footer-links">
@@ -2233,185 +1203,119 @@ e<!DOCTYPE html>
     </div>
   </footer>
 
-  <!-- ========== FLOATING DOWNLOAD BUTTON (MOBILE) ========== -->
+  <!-- FLOATING DOWNLOAD -->
   <div class="floating-download" id="floatingDownload">
     <a href="#download" class="floating-download-btn">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-        <polyline points="7 10 12 15 17 10"/>
-        <line x1="12" y1="15" x2="12" y2="3"/>
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
       </svg>
       Download Now — It's Free
     </a>
   </div>
 
-  <!-- ========== JAVASCRIPT ========== -->
+  <!-- JAVASCRIPT -->
   <script>
     (function() {
       'use strict';
 
-      // ===== Intersection Observer for Scroll Animations =====
-      var observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
-      };
-
+      /* Intersection Observer for fade-up */
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            // Don't unobserve — keep it simple and performant
-          }
-        });
-      }, observerOptions);
-
-      // Observe all fade-up elements
-      var fadeElements = document.querySelectorAll('.fade-up');
-      for (var i = 0; i < fadeElements.length; i++) {
-        observer.observe(fadeElements[i]);
-      }
-
-      // ===== Scroll Reveal Observer (blur-to-focus) =====
-      var revealElements = document.querySelectorAll('.reveal');
-      var revealObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
 
-      for (var r = 0; r < revealElements.length; r++) {
-        revealObserver.observe(revealElements[r]);
-      }
-
-      // ===== Navbar Scroll Effect =====
+      /* Navbar scroll */
       var navbar = document.getElementById('navbar');
-      var lastScrollY = 0;
-
-      function handleScroll() {
-        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-        lastScrollY = scrollY;
-      }
-
-      // Throttle scroll handler
-      var scrollTicking = false;
       window.addEventListener('scroll', function() {
-        if (!scrollTicking) {
-          window.requestAnimationFrame(function() {
-            handleScroll();
-            scrollTicking = false;
-          });
-          scrollTicking = true;
-        }
+        navbar.classList.toggle('scrolled', window.pageYOffset > 50);
       }, { passive: true });
 
-      // ===== Mobile Menu Toggle =====
+      /* Mobile menu */
       var menuToggle = document.getElementById('menuToggle');
       var mobileMenu = document.getElementById('mobileMenu');
       var menuIconOpen = document.getElementById('menuIconOpen');
       var menuIconClose = document.getElementById('menuIconClose');
-      var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
       var isMenuOpen = false;
-
       function toggleMenu() {
         isMenuOpen = !isMenuOpen;
-        if (isMenuOpen) {
-          mobileMenu.classList.add('open');
-          menuIconOpen.style.display = 'none';
-          menuIconClose.style.display = 'block';
-          document.body.style.overflow = 'hidden';
-        } else {
-          mobileMenu.classList.remove('open');
-          menuIconOpen.style.display = 'block';
-          menuIconClose.style.display = 'none';
-          document.body.style.overflow = '';
-        }
+        mobileMenu.classList.toggle('open', isMenuOpen);
+        menuIconOpen.style.display = isMenuOpen ? 'none' : 'block';
+        menuIconClose.style.display = isMenuOpen ? 'block' : 'none';
+        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
       }
-
       menuToggle.addEventListener('click', toggleMenu);
+      document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+        link.addEventListener('click', function() { if (isMenuOpen) toggleMenu(); });
+      });
 
-      for (var j = 0; j < mobileNavLinks.length; j++) {
-        mobileNavLinks[j].addEventListener('click', function() {
-          if (isMenuOpen) toggleMenu();
-        });
-      }
-
-      // ===== FAQ Accordion =====
+      /* FAQ accordion */
       var faqItems = document.querySelectorAll('.faq-item');
-
-      for (var k = 0; k < faqItems.length; k++) {
-        (function(item) {
-          var question = item.querySelector('.faq-question');
-          var answer = item.querySelector('.faq-answer');
-          var answerInner = item.querySelector('.faq-answer-inner');
-
-          question.addEventListener('click', function() {
-            var isActive = item.classList.contains('active');
-
-            // Close all other items
-            for (var m = 0; m < faqItems.length; m++) {
-              faqItems[m].classList.remove('active');
-              faqItems[m].querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-              faqItems[m].querySelector('.faq-answer').style.maxHeight = '0';
-            }
-
-            // Toggle current item
-            if (!isActive) {
-              item.classList.add('active');
-              question.setAttribute('aria-expanded', 'true');
-              answer.style.maxHeight = answerInner.scrollHeight + 20 + 'px';
-            }
+      faqItems.forEach(function(item) {
+        item.querySelector('.faq-question').addEventListener('click', function() {
+          var isActive = item.classList.contains('active');
+          faqItems.forEach(function(other) {
+            other.classList.remove('active');
+            other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            other.querySelector('.faq-answer').style.maxHeight = '0';
           });
-        })(faqItems[k]);
-      }
+          if (!isActive) {
+            item.classList.add('active');
+            this.setAttribute('aria-expanded', 'true');
+            var answer = item.querySelector('.faq-answer');
+            answer.style.maxHeight = answer.scrollHeight + 20 + 'px';
+          }
+        });
+      });
 
-      // ===== Smooth Scroll for Anchor Links =====
-      var anchorLinks = document.querySelectorAll('a[href^="#"]');
-      for (var l = 0; l < anchorLinks.length; l++) {
-        anchorLinks[l].addEventListener('click', function(e) {
+      /* Smooth scroll */
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
           var targetId = this.getAttribute('href');
           if (targetId === '#') return;
           var target = document.querySelector(targetId);
           if (target) {
             e.preventDefault();
             var navHeight = navbar.offsetHeight;
-            var targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
             window.scrollTo({
-              top: targetTop,
+              top: target.getBoundingClientRect().top + window.pageYOffset - navHeight,
               behavior: 'smooth'
             });
           }
         });
-      }
+      });
 
-      // ===== Hide floating button when near download section =====
+      /* Countdown timer — 7 days from page load */
+      var deadline = new Date().getTime() + 7 * 24 * 60 * 60 * 1000;
+      function updateCountdown() {
+        var now = new Date().getTime();
+        var diff = deadline - now;
+        if (diff <= 0) { diff = 0; }
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById('cd-days').textContent = days < 10 ? '0' + days : days;
+        document.getElementById('cd-hours').textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById('cd-minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById('cd-seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      /* Hide floating button near download section */
       var floatingBtn = document.getElementById('floatingDownload');
       var downloadSection = document.getElementById('download');
-
       if (floatingBtn && downloadSection) {
-        var floatObserver = new IntersectionObserver(function(entries) {
+        var floatObs = new IntersectionObserver(function(entries) {
           entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              floatingBtn.style.opacity = '0';
-              floatingBtn.style.pointerEvents = 'none';
-            } else {
-              floatingBtn.style.opacity = '1';
-              floatingBtn.style.pointerEvents = '';
-            }
+            floatingBtn.style.opacity = entry.isIntersecting ? '0' : '1';
+            floatingBtn.style.pointerEvents = entry.isIntersecting ? 'none' : '';
           });
         }, { threshold: 0.3 });
-
-        floatObserver.observe(downloadSection);
+        floatObs.observe(downloadSection);
       }
-
-      // Run scroll handler once on load
-      handleScroll();
     })();
   </script>
 </body>
