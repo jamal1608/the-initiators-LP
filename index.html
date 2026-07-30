@@ -386,6 +386,39 @@
     }
     .countdown-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 
+    /* ========== HERO VIDEO ========== */
+    .hero-video { background: var(--primary); padding: 0 0 60px; }
+    .hero-video .container { max-width: 1000px; }
+    .hero-video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 80px rgba(59, 130, 246, 0.15), 0 0 0 1px var(--card-border);
+    }
+    .hero-video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .hero-video-label {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .hero-video-label span {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.02em;
+    }
+
     /* ========== FEATURES ========== */
     .features { background: var(--primary); }
     .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -885,6 +918,18 @@
         </div>
       </div>
       <a href="#download" class="countdown-btn">Book Your Free Demo Class</a>
+    </div>
+  </section>
+
+  <!-- HERO VIDEO -->
+  <section class="hero-video">
+    <div class="container">
+      <div class="hero-video-label fade-up">
+        <span>▶ Watch First</span>
+      </div>
+      <div class="hero-video-wrapper fade-up fade-up-delay-1">
+        <iframe src="https://www.youtube.com/embed/Om2Y7CSGgnM" title="The Initiators — Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
     </div>
   </section>
 
